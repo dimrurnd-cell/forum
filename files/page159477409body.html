@@ -1,0 +1,105 @@
+<!--allrecords--> <div id="allrecords" data-tilda-export="yes" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="27715696" data-tilda-page-id="159477409" data-tilda-formskey="7b682d191f929a43838d12f727715696" data-tilda-cookie="no" data-tilda-lazy="yes" data-tilda-root-zone="com" data-tilda-project-country="RU"> <div id="rec2556683501" class="r t-rec" style=" " data-record-type="1370"> <!-- T1370 --> <div class="t1370"> <!-- nominify begin --> <link rel="preconnect" href="https://fonts.googleapis.com"> <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap" rel="stylesheet"> <style>
+  :root {
+    --blue-deep: #0F1B4D;
+    --orange: #E8622C;
+    --orange-2: #FF8A50;
+  }
+  #loader, #loader *,
+  .topbar, .topbar *,
+  .nav-panel, .nav-panel * {
+    box-sizing:border-box; margin:0; padding:0;
+  }
+  .topbar a, .nav-panel a { color:inherit; text-decoration:none; }
+  .topbar button, .nav-panel button { font-family:inherit; cursor:pointer; }
+
+  /* ===== LOADER ===== */
+  #loader {
+    position:fixed; inset:0; z-index:9999; background:var(--blue-deep);
+    display:flex; align-items:center; justify-content:center; flex-direction:column; gap:18px;
+    transition:opacity 0.5s ease, visibility 0.5s ease;
+  }
+  #loader.hide { opacity:0; visibility:hidden; pointer-events:none; }
+  .loader-badge {
+    width:64px; height:64px; border-radius:50%; border:3px solid rgba(255,255,255,0.15);
+    border-top-color:var(--orange); animation:spin 0.9s linear infinite;
+  }
+  .loader-text { color:#fff; font-family:'Oswald',sans-serif; letter-spacing:0.14em; font-size:13px; opacity:0.7; }
+  @keyframes spin { to { transform:rotate(360deg); } }
+
+  /* ===== TOPBAR ===== */
+  .topbar {
+    position:sticky; top:0; z-index:500;
+    background:rgba(15,27,77,0.96); backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .topbar-inner {
+    max-width:1080px; margin:0 auto; padding:10px 24px;
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+  }
+  .topbar-brand { display:flex; align-items:center; gap:12px; min-width:0; }
+  .topbar-logo { height:38px; width:auto; flex-shrink:0; display:block; }
+  .topbar-name { color:#fff; font-family:'Oswald',sans-serif; font-size:14px; font-weight:600; letter-spacing:0.01em; line-height:1.25; }
+  .topbar-name span { color:var(--orange-2); }
+  .topbar-right { display:flex; align-items:center; gap:12px; }
+  .topbar-cta {
+    background:var(--orange); color:#fff; font-family:'Oswald',sans-serif; font-weight:600;
+    font-size:13px; letter-spacing:0.03em; padding:10px 20px; border-radius:100px;
+    text-decoration:none; white-space:nowrap; box-shadow:0 8px 20px rgba(232,98,44,0.35);
+    transition:transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .topbar-cta:hover { transform:translateY(-1px); box-shadow:0 10px 26px rgba(232,98,44,0.45); }
+
+  .burger {
+    width:40px; height:40px; border-radius:10px; border:1px solid rgba(255,255,255,0.18);
+    background:rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center;
+    flex-direction:column; gap:4px; flex-shrink:0;
+  }
+  .burger span { width:18px; height:2px; background:#fff; border-radius:2px; transition:transform 0.2s ease, opacity 0.2s ease; }
+  .burger.open span:nth-child(1) { transform:translateY(6px) rotate(45deg); }
+  .burger.open span:nth-child(2) { opacity:0; }
+  .burger.open span:nth-child(3) { transform:translateY(-6px) rotate(-45deg); }
+
+  .nav-panel {
+    max-height:0; overflow:hidden; background:var(--blue-deep); border-bottom:1px solid rgba(255,255,255,0.08);
+    transition:max-height 0.28s ease;
+  }
+  .nav-panel.open { max-height:320px; }
+  .nav-panel-inner { max-width:1080px; margin:0 auto; padding:6px 24px 18px; display:flex; flex-direction:column; }
+  .nav-panel a {
+    color:rgba(255,255,255,0.85); font-family:'Oswald',sans-serif;
+    font-size:15px; letter-spacing:0.02em; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .nav-panel a:last-child { border-bottom:none; }
+  .nav-panel a:hover { color:var(--orange-2); }
+
+  @media (max-width:720px) {
+    .topbar-name { font-size:12px; }
+    .topbar-cta { display:none; }
+  }
+</style> <div id="loader"> <div class="loader-badge"></div> <div class="loader-text">ЗАГРУЗКА ФОРУМА…</div> </div> <div class="topbar"> <div class="topbar-inner"> <div class="topbar-brand"> <img class="topbar-logo" src="https://www.donexpocentre.ru/media/filer_public/GG/kvc_logo.png" alt="ДонЭкспоцентр"> <div class="topbar-name">ФОРУМ ПРОДАЖ<br><span>НЕДВИЖИМОСТИ</span></div> </div> <div class="topbar-right"> <a href="#tickets" class="topbar-cta" onclick="if(window.ym){ym(111119624,'reachGoal','book_click_header')}">Забронировать место</a> <button class="burger" id="burgerBtn" aria-label="Меню"> <span></span><span></span><span></span> </button> </div> </div> <div class="nav-panel" id="navPanel"> <div class="nav-panel-inner"> <a href="#about">О форуме</a> <a href="#schedule">Программа форума</a> <a href="#pricing">Стоимость участия</a> <a href="#tickets">Забронировать место</a> <a href="#contacts">Контакты</a> </div> </div> </div> <script>
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      var l = document.getElementById('loader');
+      if (l) l.classList.add('hide');
+    }, 350);
+  });
+  setTimeout(function() {
+    var l = document.getElementById('loader');
+    if (l) l.classList.add('hide');
+  }, 3500);
+
+  var burgerBtn = document.getElementById('burgerBtn');
+  var navPanel = document.getElementById('navPanel');
+  if (burgerBtn && navPanel) {
+    burgerBtn.addEventListener('click', function() {
+      burgerBtn.classList.toggle('open');
+      navPanel.classList.toggle('open');
+    });
+    navPanel.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        burgerBtn.classList.remove('open');
+        navPanel.classList.remove('open');
+      });
+    });
+  }
+</script> <!-- nominify end --> </div> </div> </div> <!--/allrecords-->

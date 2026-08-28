@@ -1,0 +1,651 @@
+<!--allrecords--> <div id="allrecords" data-tilda-export="yes" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="27715696" data-tilda-page-id="156340926" data-tilda-formskey="7b682d191f929a43838d12f727715696" data-tilda-cookie="no" data-tilda-lazy="yes" data-tilda-root-zone="com" data-tilda-project-country="RU"> <!--header--> <header id="t-header" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="27715696" data-tilda-page-id="159477409" data-tilda-formskey="7b682d191f929a43838d12f727715696" data-tilda-cookie="no" data-tilda-lazy="yes" data-tilda-root-zone="com" data-tilda-project-country="RU"> <div id="rec2556683501" class="r t-rec" style=" " data-record-type="1370"> <!-- T1370 --> <div class="t1370"> <!-- nominify begin --> <link rel="preconnect" href="https://fonts.googleapis.com"> <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap" rel="stylesheet"> <style>
+  :root {
+    --blue-deep: #0F1B4D;
+    --orange: #E8622C;
+    --orange-2: #FF8A50;
+  }
+  #loader, #loader *,
+  .topbar, .topbar *,
+  .nav-panel, .nav-panel * {
+    box-sizing:border-box; margin:0; padding:0;
+  }
+  .topbar a, .nav-panel a { color:inherit; text-decoration:none; }
+  .topbar button, .nav-panel button { font-family:inherit; cursor:pointer; }
+
+  /* ===== LOADER ===== */
+  #loader {
+    position:fixed; inset:0; z-index:9999; background:var(--blue-deep);
+    display:flex; align-items:center; justify-content:center; flex-direction:column; gap:18px;
+    transition:opacity 0.5s ease, visibility 0.5s ease;
+  }
+  #loader.hide { opacity:0; visibility:hidden; pointer-events:none; }
+  .loader-badge {
+    width:64px; height:64px; border-radius:50%; border:3px solid rgba(255,255,255,0.15);
+    border-top-color:var(--orange); animation:spin 0.9s linear infinite;
+  }
+  .loader-text { color:#fff; font-family:'Oswald',sans-serif; letter-spacing:0.14em; font-size:13px; opacity:0.7; }
+  @keyframes spin { to { transform:rotate(360deg); } }
+
+  /* ===== TOPBAR ===== */
+  .topbar {
+    position:sticky; top:0; z-index:500;
+    background:rgba(15,27,77,0.96); backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .topbar-inner {
+    max-width:1080px; margin:0 auto; padding:10px 24px;
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+  }
+  .topbar-brand { display:flex; align-items:center; gap:12px; min-width:0; }
+  .topbar-logo { height:38px; width:auto; flex-shrink:0; display:block; }
+  .topbar-name { color:#fff; font-family:'Oswald',sans-serif; font-size:14px; font-weight:600; letter-spacing:0.01em; line-height:1.25; }
+  .topbar-name span { color:var(--orange-2); }
+  .topbar-right { display:flex; align-items:center; gap:12px; }
+  .topbar-cta {
+    background:var(--orange); color:#fff; font-family:'Oswald',sans-serif; font-weight:600;
+    font-size:13px; letter-spacing:0.03em; padding:10px 20px; border-radius:100px;
+    text-decoration:none; white-space:nowrap; box-shadow:0 8px 20px rgba(232,98,44,0.35);
+    transition:transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .topbar-cta:hover { transform:translateY(-1px); box-shadow:0 10px 26px rgba(232,98,44,0.45); }
+
+  .burger {
+    width:40px; height:40px; border-radius:10px; border:1px solid rgba(255,255,255,0.18);
+    background:rgba(255,255,255,0.06); display:flex; align-items:center; justify-content:center;
+    flex-direction:column; gap:4px; flex-shrink:0;
+  }
+  .burger span { width:18px; height:2px; background:#fff; border-radius:2px; transition:transform 0.2s ease, opacity 0.2s ease; }
+  .burger.open span:nth-child(1) { transform:translateY(6px) rotate(45deg); }
+  .burger.open span:nth-child(2) { opacity:0; }
+  .burger.open span:nth-child(3) { transform:translateY(-6px) rotate(-45deg); }
+
+  .nav-panel {
+    max-height:0; overflow:hidden; background:var(--blue-deep); border-bottom:1px solid rgba(255,255,255,0.08);
+    transition:max-height 0.28s ease;
+  }
+  .nav-panel.open { max-height:320px; }
+  .nav-panel-inner { max-width:1080px; margin:0 auto; padding:6px 24px 18px; display:flex; flex-direction:column; }
+  .nav-panel a {
+    color:rgba(255,255,255,0.85); font-family:'Oswald',sans-serif;
+    font-size:15px; letter-spacing:0.02em; padding:12px 0; border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .nav-panel a:last-child { border-bottom:none; }
+  .nav-panel a:hover { color:var(--orange-2); }
+
+  @media (max-width:720px) {
+    .topbar-name { font-size:12px; }
+    .topbar-cta { display:none; }
+  }
+</style> <div id="loader"> <div class="loader-badge"></div> <div class="loader-text">ЗАГРУЗКА ФОРУМА…</div> </div> <div class="topbar"> <div class="topbar-inner"> <div class="topbar-brand"> <img class="topbar-logo" src="https://www.donexpocentre.ru/media/filer_public/GG/kvc_logo.png" alt="ДонЭкспоцентр"> <div class="topbar-name">ФОРУМ ПРОДАЖ<br><span>НЕДВИЖИМОСТИ</span></div> </div> <div class="topbar-right"> <a href="#tickets" class="topbar-cta" onclick="if(window.ym){ym(111119624,'reachGoal','book_click_header')}">Забронировать место</a> <button class="burger" id="burgerBtn" aria-label="Меню"> <span></span><span></span><span></span> </button> </div> </div> <div class="nav-panel" id="navPanel"> <div class="nav-panel-inner"> <a href="#about">О форуме</a> <a href="#schedule">Программа форума</a> <a href="#pricing">Стоимость участия</a> <a href="#tickets">Забронировать место</a> <a href="#contacts">Контакты</a> </div> </div> </div> <script>
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      var l = document.getElementById('loader');
+      if (l) l.classList.add('hide');
+    }, 350);
+  });
+  setTimeout(function() {
+    var l = document.getElementById('loader');
+    if (l) l.classList.add('hide');
+  }, 3500);
+
+  var burgerBtn = document.getElementById('burgerBtn');
+  var navPanel = document.getElementById('navPanel');
+  if (burgerBtn && navPanel) {
+    burgerBtn.addEventListener('click', function() {
+      burgerBtn.classList.toggle('open');
+      navPanel.classList.toggle('open');
+    });
+    navPanel.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        burgerBtn.classList.remove('open');
+        navPanel.classList.remove('open');
+      });
+    });
+  }
+</script> <!-- nominify end --> </div> </div> </header> <!--/header--> <div id="rec2524434601" class="r t-rec" style=" " data-record-type="1370"> <!-- T1370 --> <div class="t1370"> <!-- nominify begin --> <!-- Yandex.Metrika counter --> <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=111119624', 'ym');
+
+    ym(111119624, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+</script> <noscript><div><img src="https://mc.yandex.ru/watch/111119624" style="position:absolute; left:-9999px;" alt=""></div></noscript> <!-- /Yandex.Metrika counter --> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1"> <title>Форум продаж недвижимости — 13 ноября 2026 · ДонЭкспоцентр</title> <link rel="preconnect" href="https://fonts.googleapis.com"> <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"> <style>
+  :root {
+    --blue-deep: #0F1B4D;
+    --blue-mid: #24358A;
+    --blue-light: #3B4FA8;
+    --orange: #E8622C;
+    --orange-2: #FF8A50;
+    --ink: #12172E;
+    --muted: #667;
+    --paper: #F7F7FA;
+    --line: #E7E8F0;
+    --bg-buildings: url('https://www.donexpocentre.ru/media/filer_public/GG/doma.png');
+    --gradient-brand: linear-gradient(160deg, #1a2668 0%, #2f3f9e 45%, #E8622C 130%);
+  }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html { scroll-behavior:smooth; }
+  body {
+    font-family:'Inter',Arial,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3 { font-family:'Oswald',Arial,sans-serif; text-transform:uppercase; letter-spacing:0.01em; }
+  a { color:inherit; }
+  .wrap { max-width:1080px; margin:0 auto; padding:0 24px; }
+  button { font-family:inherit; cursor:pointer; }
+
+  .hero {
+    position:relative;
+    background-image:
+      radial-gradient(circle at 15% 85%, rgba(255,255,255,0.10) 0%, transparent 45%),
+      radial-gradient(circle at 90% 15%, rgba(255,255,255,0.08) 0%, transparent 40%),
+      repeating-linear-gradient(115deg, rgba(255,255,255,0.045) 0px, rgba(255,255,255,0.045) 1px, transparent 1px, transparent 64px),
+      var(--gradient-brand);
+    overflow:hidden; padding:138px 0 117px;
+  }
+  .hero::after {
+    content:""; position:absolute; right:0; bottom:0; width:34%; height:88%;
+    background-image:var(--bg-buildings);
+    background-size:contain; background-repeat:no-repeat; background-position:bottom right;
+    opacity:0.5; pointer-events:none;
+    mask-image:linear-gradient(to left, rgba(0,0,0,1) 40%, transparent 100%);
+    -webkit-mask-image:linear-gradient(to left, rgba(0,0,0,1) 40%, transparent 100%);
+    z-index:0;
+  }
+  .hero-inner { position:relative; z-index:1; max-width:1080px; margin:0 auto; padding:0 24px; width:100%; }
+
+  .hero-top-row { display:flex; align-items:center; justify-content:space-between; gap:36px; }
+  .hero h1 { color:#fff; font-size:clamp(45px,7.5vw,72px); line-height:1.08; font-weight:700; text-align:left; margin:0; }
+  .date-badge-xl {
+    display:flex; flex-direction:column; align-items:center; justify-content:center; flex-shrink:0;
+    width:150px; height:150px; border-radius:50%;
+    background:linear-gradient(135deg, #FF8A50, #E8622C);
+    border:3px solid rgba(255,255,255,0.55);
+    box-shadow:0 27px 60px rgba(232,98,44,0.5), inset 0 1px 0 rgba(255,255,255,0.5);
+    animation:datePulse 3s ease-in-out infinite;
+  }
+  .date-badge-xl .d-num { font-family:'JetBrains Mono',monospace; font-weight:700; font-size:42px; color:#fff; line-height:1; text-shadow:0 3px 15px rgba(0,0,0,0.2); }
+  .date-badge-xl .d-txt { text-align:center; font-family:'Oswald',sans-serif; font-size:14px; letter-spacing:0.04em; line-height:1.35; color:#fff; margin-top:5px; }
+  @keyframes datePulse {
+    0%, 100% { box-shadow:0 27px 60px rgba(232,98,44,0.5), inset 0 1px 0 rgba(255,255,255,0.5); }
+    50% { box-shadow:0 33px 72px rgba(232,98,44,0.7), inset 0 1px 0 rgba(255,255,255,0.6); }
+  }
+  @media (prefers-reduced-motion: reduce) { .date-badge-xl { animation:none; } }
+
+  .hero-sub {
+    color:rgba(255,255,255,0.82); font-size:25px; line-height:1.5; font-weight:500;
+    text-align:left; max-width:780px; margin:36px auto 0 0;
+  }
+  .hero-sub strong { color:#fff; font-weight:700; }
+
+  .hero-actions { display:flex; justify-content:flex-start; margin-top:42px; }
+  .btn-primary {
+    position:relative; overflow:hidden; box-sizing:border-box;
+    display:inline-flex; flex-direction:column; align-items:center; justify-content:center; gap:3px;
+    background:linear-gradient(135deg, rgba(255,150,90,0.85), rgba(232,98,44,0.85));
+    color:#fff; font-family:'Oswald',sans-serif; font-weight:700;
+    font-size:24px; line-height:1.2; letter-spacing:0.02em; padding:17px 42px; border-radius:100px;
+    text-decoration:none; box-shadow:0 20px 44px rgba(232,98,44,0.45), inset 0 1px 0 rgba(255,255,255,0.5);
+    border:2px solid rgba(255,255,255,0.45);
+    backdrop-filter:blur(14px) saturate(180%); -webkit-backdrop-filter:blur(14px) saturate(180%);
+    transition:transform 0.15s ease, box-shadow 0.15s ease;
+    animation:btnGlow 2.6s ease-in-out infinite;
+  }
+  .btn-primary .btn-sub {
+    position:relative; font-family:'Oswald',sans-serif; font-size:14px; font-weight:500;
+    letter-spacing:0.04em; opacity:0.92; text-transform:none;
+  }
+  .btn-primary::before {
+    content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
+    background:linear-gradient(115deg, transparent 30%, rgba(255,255,255,0.55) 48%, transparent 66%);
+    background-size:220% 220%; background-position:130% 0%;
+    animation:btnShine 3.2s ease-in-out infinite;
+  }
+  .btn-primary:hover { transform:translateY(-2px); }
+  @keyframes btnGlow {
+    0%, 100% { box-shadow:0 27px 60px rgba(232,98,44,0.45), inset 0 1px 0 rgba(255,255,255,0.5); }
+    50% { box-shadow:0 33px 72px rgba(232,98,44,0.68), inset 0 1px 0 rgba(255,255,255,0.6); }
+  }
+  @keyframes btnShine {
+    0% { background-position:130% 0%; }
+    60%, 100% { background-position:-30% 0%; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .btn-primary { animation:none; }
+    .btn-primary::before { animation:none; }
+  }
+
+  .marquee { background:var(--orange); overflow:hidden; white-space:nowrap; position:relative; }
+  .marquee-track { display:inline-flex; align-items:center; gap:48px; animation:marquee 22s linear infinite; padding:12px 0; }
+  .marquee-track span {
+    font-family:'Oswald',sans-serif; font-weight:600; font-size:14px; letter-spacing:0.06em;
+    color:#fff; text-transform:uppercase; display:inline-flex; align-items:center; gap:48px;
+  }
+  .marquee-track span::after { content:"✦"; opacity:0.7; margin-left:48px; }
+  @keyframes marquee { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+  @media (prefers-reduced-motion: reduce) { .marquee-track { animation:none; } }
+
+  .stats-band { background:var(--paper); padding:48px 0; position:relative; overflow:hidden; }
+  .stats-band::before {
+    content:""; position:absolute; top:0; left:0; right:0; height:70px; z-index:0; pointer-events:none;
+    background:linear-gradient(180deg, rgba(255,255,255,0.5), transparent 100%);
+  }
+  .stats-row {
+    position:relative; z-index:1; max-width:1080px; margin:0 auto; padding:12px 24px;
+    display:grid; grid-template-columns:repeat(4,1fr); gap:18px;
+  }
+  .stats-item {
+    text-align:center; padding:20px 12px; border-radius:18px; position:relative; overflow:visible;
+    background:linear-gradient(160deg, rgba(255,255,255,0.8), rgba(255,255,255,0.4));
+    border:1px solid rgba(255,255,255,0.7);
+    backdrop-filter:blur(14px) saturate(160%); -webkit-backdrop-filter:blur(14px) saturate(160%);
+    box-shadow:0 14px 30px rgba(15,27,77,0.08), inset 0 1px 0 rgba(255,255,255,0.7);
+  }
+  .stats-item::before {
+    content:""; position:absolute; width:100px; height:100px; border-radius:50%;
+    filter:blur(36px); opacity:0.4; z-index:-1; pointer-events:none; top:-30px; left:50%; transform:translateX(-50%);
+  }
+  .stats-item:nth-child(odd)::before { background:var(--orange); }
+  .stats-item:nth-child(even)::before { background:var(--blue-mid); }
+  .stats-num { position:relative; font-family:'JetBrains Mono',monospace; font-weight:700; color:var(--blue-deep); font-size:28px; }
+  .stats-lbl { position:relative; color:var(--muted); font-size:11.5px; letter-spacing:0.05em; text-transform:uppercase; margin-top:4px; }
+
+  .countdown-band {
+    background:linear-gradient(120deg, #2f3f9e 0%, var(--orange) 55%, #FFB088 130%);
+    position:relative; overflow:hidden; padding:38px 0;
+  }
+  .countdown-band::before {
+    content:""; position:absolute; inset:0; pointer-events:none;
+    background-image:
+      linear-gradient(180deg, rgba(26,38,104,0.35), transparent 45%),
+      repeating-linear-gradient(115deg, rgba(255,255,255,0.09) 0px, rgba(255,255,255,0.09) 1px, transparent 1px, transparent 46px);
+  }
+  .countdown-inner { position:relative; text-align:center; }
+  .countdown-label {
+    color:#fff; font-family:'Oswald',sans-serif; font-weight:600; font-size:15px;
+    letter-spacing:0.08em; text-transform:uppercase; margin-bottom:18px; opacity:0.95;
+  }
+  .countdown-grid { display:flex; align-items:center; justify-content:center; gap:14px; flex-wrap:wrap; margin-bottom:22px; }
+  .cd-item {
+    background:rgba(255,255,255,0.16); border:1px solid rgba(255,255,255,0.32); border-radius:16px;
+    padding:14px 18px; min-width:84px; backdrop-filter:blur(10px) saturate(160%); -webkit-backdrop-filter:blur(10px) saturate(160%);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,0.3);
+  }
+  .cd-num { font-family:'JetBrains Mono',monospace; font-weight:700; font-size:clamp(30px,5vw,44px); color:#fff; line-height:1; }
+  .cd-lbl { color:rgba(255,255,255,0.85); font-size:11px; letter-spacing:0.06em; text-transform:uppercase; margin-top:6px; }
+  .cd-sep { color:#fff; font-family:'JetBrains Mono',monospace; font-weight:700; font-size:clamp(24px,4vw,34px); opacity:0.7; }
+  .countdown-cta {
+    display:inline-flex; align-items:center; gap:8px; color:#fff;
+    background:rgba(255,255,255,0.16); border:1px solid rgba(255,255,255,0.32);
+    backdrop-filter:blur(10px) saturate(160%); -webkit-backdrop-filter:blur(10px) saturate(160%);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,0.3);
+    font-family:'Oswald',sans-serif; font-weight:700; font-size:16px; letter-spacing:0.03em;
+    padding:14px 26px; border-radius:16px; text-decoration:none;
+    transition:transform 0.15s ease, background 0.15s ease;
+  }
+  .countdown-cta:hover { transform:translateY(-2px); background:rgba(255,255,255,0.24); }
+
+  @media (max-width:480px) {
+    .cd-item { min-width:64px; padding:10px 10px; }
+    .countdown-grid { gap:8px; }
+  }
+
+  section.block { padding:64px 0; }
+  .section-head { text-align:center; max-width:640px; margin:0 auto 32px; }
+  .eyebrow {
+    display:inline-flex; align-items:center; gap:8px;
+    background:#FDECE4; color:var(--orange); font-family:'Oswald',sans-serif; font-weight:600;
+    font-size:12px; letter-spacing:0.08em; padding:7px 16px; border-radius:100px; margin-bottom:18px;
+  }
+  .glass-chip {
+    background:rgba(255,255,255,0.14) !important;
+    border:1px solid rgba(255,255,255,0.3);
+    backdrop-filter:blur(10px) saturate(160%); -webkit-backdrop-filter:blur(10px) saturate(160%);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,0.3);
+  }
+  .block h2 { font-size:clamp(32px,4.6vw,46px); color:var(--blue-deep); margin-bottom:14px; font-weight:700; line-height:1.1; }
+  .block-lead { color:var(--muted); font-size:15.5px; line-height:1.65; }
+
+  #about { position:relative; overflow:hidden; }
+  #about::before {
+    content:""; position:absolute; top:0; left:0; right:0; height:140px; z-index:0; pointer-events:none;
+    background:linear-gradient(180deg, rgba(47,63,158,0.16), rgba(232,98,44,0.14) 60%, transparent 100%);
+  }
+  #about .wrap { position:relative; z-index:1; }
+
+  #tickets { position:relative; overflow:hidden; }
+  #tickets::before {
+    content:""; position:absolute; top:0; left:0; right:0; height:140px; z-index:0; pointer-events:none;
+    background:linear-gradient(180deg, rgba(255,141,80,0.28), transparent 100%);
+  }
+  #tickets .wrap { position:relative; z-index:1; }
+
+  .about-grid { display:grid; grid-template-columns:1fr 1fr; gap:28px; margin-top:12px; }
+  .about-card {
+    background:linear-gradient(160deg, rgba(255,255,255,0.75), rgba(255,255,255,0.35));
+    border:1px solid rgba(255,255,255,0.6); border-radius:22px; padding:30px 30px;
+    position:relative; overflow:visible;
+    backdrop-filter:blur(14px) saturate(160%); -webkit-backdrop-filter:blur(14px) saturate(160%);
+    box-shadow:0 20px 45px rgba(15,27,77,0.10), inset 0 1px 0 rgba(255,255,255,0.6);
+  }
+  .about-card::before {
+    content:""; position:absolute; width:170px; height:170px; border-radius:50%;
+    filter:blur(50px); opacity:0.5; z-index:-1; pointer-events:none;
+  }
+  .about-card:nth-child(1)::before { background:var(--orange); top:-50px; left:-50px; }
+  .about-card:nth-child(2)::before { background:var(--blue-mid); bottom:-50px; right:-50px; }
+  .about-card::after {
+    content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
+    background:linear-gradient(120deg, rgba(255,255,255,0.55) 0%, transparent 35%, transparent 65%, rgba(255,255,255,0.35) 100%);
+    background-size:220% 220%; background-position:0% 0%;
+    animation:aboutSheen 7s ease-in-out infinite;
+  }
+  @keyframes aboutSheen {
+    0%, 100% { background-position:0% 0%; }
+    50% { background-position:100% 100%; }
+  }
+  @media (prefers-reduced-motion: reduce) { .about-card::after { animation:none; } }
+  .about-card h3 { position:relative; z-index:1; font-size:16px; color:var(--blue-deep); margin-bottom:14px; font-weight:600; text-align:left; }
+  .about-card ul { position:relative; z-index:1; list-style:none; }
+  .about-card li {
+    font-size:14.5px; color:var(--ink); line-height:1.6; padding-left:18px; position:relative; margin-bottom:10px; text-align:left;
+  }
+  .about-card li::before { content:"—"; position:absolute; left:0; color:var(--orange); font-weight:700; }
+  .about-card li:last-child { margin-bottom:0; }
+
+  .spk {
+    display:grid; grid-template-columns:44px 140px 1fr; gap:18px; align-items:flex-start;
+    padding:22px 0; border-bottom:1px solid var(--line); text-align:left;
+  }
+  .spk:first-of-type { border-top:1px solid var(--line); }
+  .spk-num { font-family:'JetBrains Mono',monospace; color:#C7CADA; font-size:13px; font-weight:600; padding-top:4px; }
+  .spk-photo {
+    width:140px; height:140px; border-radius:50%; object-fit:cover;
+    border:3px solid #fff; box-shadow:0 0 0 2px var(--line);
+  }
+  .spk-time { font-family:'JetBrains Mono',monospace; color:var(--orange); font-size:13px; font-weight:600; margin-bottom:6px; }
+  .spk-topic { font-family:'Inter',sans-serif; text-transform:none; letter-spacing:0; font-size:16.5px; font-weight:700; color:var(--blue-deep); margin-bottom:5px; line-height:1.35; }
+  .spk-name { font-size:14px; font-weight:700; color:var(--ink); margin-bottom:5px; }
+  .spk-bio { font-size:13.5px; color:var(--muted); line-height:1.6; }
+  .spk-city { color:#9498AC; }
+  .break {
+    text-align:center; font-family:'JetBrains Mono',monospace; color:#9498AC; font-size:12px;
+    letter-spacing:0.05em; text-transform:uppercase; padding:14px 0;
+  }
+
+  #pricing {
+    position:relative; overflow:hidden;
+    background:linear-gradient(160deg, #1a2668 0%, #2f3f9e 45%, #E8622C 130%);
+    padding:76px 0;
+  }
+  #pricing::before {
+    content:""; position:absolute; right:-40px; bottom:-20px; width:280px; height:95%;
+    background-image:var(--bg-buildings);
+    background-size:contain; background-repeat:no-repeat; background-position:bottom right;
+    opacity:0.16; pointer-events:none;
+  }
+  #pricing .blob { position:absolute; border-radius:50%; filter:blur(60px); pointer-events:none; }
+  #pricing .blob-1 { width:340px; height:340px; background:rgba(255,141,80,0.55); top:-100px; left:-80px; }
+  #pricing .blob-2 { width:280px; height:280px; background:rgba(59,79,168,0.6); bottom:-80px; right:10%; }
+  #pricing .blob-3 { width:220px; height:220px; background:rgba(255,255,255,0.25); top:30%; left:45%; }
+  #pricing .wrap { position:relative; z-index:1; }
+  #pricing .block h2, #pricing h2 { color:#fff; }
+
+  .price-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-top:12px; }
+  .price-card {
+    position:relative; overflow:hidden; text-align:center; cursor:pointer; user-select:none;
+    padding:32px 24px; border-radius:26px;
+    background:linear-gradient(155deg, rgba(255,255,255,0.38), rgba(255,255,255,0.14));
+    border:1px solid rgba(255,255,255,0.45);
+    backdrop-filter:blur(18px) saturate(160%);
+    -webkit-backdrop-filter:blur(18px) saturate(160%);
+    box-shadow:
+      0 20px 40px rgba(10,15,50,0.25),
+      inset 0 1px 0 rgba(255,255,255,0.6),
+      inset 0 -1px 12px rgba(255,255,255,0.08);
+    transition:transform 0.35s cubic-bezier(.2,.8,.2,1), box-shadow 0.35s ease, border-color 0.35s ease;
+  }
+  .price-card::before {
+    content:""; position:absolute; inset:0; border-radius:inherit; pointer-events:none;
+    background:linear-gradient(115deg, transparent 20%, rgba(255,255,255,0.5) 40%, transparent 60%);
+    background-size:220% 220%; background-position:120% 0%;
+    opacity:0.7; transition:background-position 1.2s ease;
+  }
+  .price-card:hover { transform:translateY(-6px) scale(1.015); box-shadow:0 28px 54px rgba(10,15,50,0.32), inset 0 1px 0 rgba(255,255,255,0.7); }
+  .price-card:hover::before { background-position:-20% 0%; }
+  .price-card.active {
+    border-color:rgba(255,255,255,0.85);
+    box-shadow:
+      0 24px 50px rgba(232,98,44,0.35),
+      0 0 0 2px rgba(255,255,255,0.5) inset,
+      inset 0 1px 0 rgba(255,255,255,0.7);
+    animation:glassFloat 4.5s ease-in-out infinite;
+  }
+  @keyframes glassFloat {
+    0%, 100% { transform:translateY(0); }
+    50% { transform:translateY(-7px); }
+  }
+  .price-tag {
+    display:inline-block; background:rgba(255,255,255,0.22); color:#fff; font-family:'Oswald',sans-serif; font-weight:700;
+    font-size:11px; letter-spacing:0.05em; padding:5px 14px; border-radius:100px; margin-bottom:14px;
+    border:1px solid rgba(255,255,255,0.4); backdrop-filter:blur(8px);
+  }
+  .price-until {
+    position:relative; font-family:'Oswald',sans-serif; font-weight:600; font-size:14px; color:#fff;
+    letter-spacing:0.02em; margin-bottom:14px; text-transform:uppercase;
+  }
+  .price-amount {
+    position:relative; font-family:'JetBrains Mono',monospace; font-size:32px; font-weight:700; color:#fff;
+    text-shadow:0 2px 12px rgba(0,0,0,0.15);
+    filter:blur(9px); opacity:0.9; transition:filter 0.4s ease, opacity 0.4s ease;
+  }
+  .price-card.show-until .price-amount { filter:blur(0); opacity:1; }
+  .price-hint { position:relative; font-size:11px; color:rgba(255,255,255,0.65); margin-top:10px; letter-spacing:0.02em; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .price-card.active { animation:none; }
+  }
+
+  .tickets-card {
+    background:var(--gradient-brand); background-size:160% 160%; background-position:70% 30%;
+    border-radius:20px; padding:44px 36px; margin-top:0; position:relative; overflow:hidden; text-align:center;
+  }
+  .tickets-card::before {
+    content:""; position:absolute; inset:0;
+    background-image:radial-gradient(circle at 90% 10%, rgba(255,255,255,0.08), transparent 50%);
+  }
+  .tickets-card::after {
+    content:""; position:absolute; left:-10px; bottom:0; width:170px; height:85%;
+    background-image:var(--bg-buildings);
+    background-size:contain; background-repeat:no-repeat; background-position:bottom left;
+    opacity:0.14; pointer-events:none;
+  }
+  .tickets-card h2 { color:#fff; position:relative; z-index:1; }
+  .tickets-card .block-lead { color:rgba(255,255,255,0.65); max-width:480px; margin:0 auto; position:relative; z-index:1; }
+  .tickets-card > .eyebrow { position:relative; z-index:1; }
+  .widget-shell {
+    position:relative; z-index:2; background:#fff; border-radius:14px; padding:22px; margin:26px auto 0; max-width:460px;
+  }
+
+  .reveal {
+    opacity:0; transform:translateY(28px);
+    transition:opacity 0.6s ease, transform 0.6s cubic-bezier(.2,.7,.2,1);
+  }
+  .reveal.in-view { opacity:1; transform:translateY(0); }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity:1; transform:none; transition:none; }
+  }
+
+  @media (max-width:900px) {
+    .wrap { padding:0 18px; }
+    section.block { padding:48px 0; }
+  }
+
+  @media (max-width:720px) {
+    .about-grid, .price-grid { grid-template-columns:1fr; }
+    .stats-row { grid-template-columns:repeat(2,1fr); row-gap:18px; }
+    .spk { grid-template-columns:28px 110px 1fr; gap:12px; }
+    .spk-photo { width:110px; height:110px; }
+    .tickets-card { padding:32px 20px; }
+    .widget-shell { padding:16px; max-width:100%; }
+    .marquee-track span { font-size:12.5px; gap:32px; }
+    .hero { padding:72px 0 56px; min-height:82vh; display:flex; align-items:center; }
+    .hero-inner { width:100%; }
+    .hero-top-row { flex-direction:row; align-items:flex-start; text-align:left; gap:16px; }
+    .hero h1 { text-align:left; font-size:42px; line-height:1.05; }
+    .hero-sub { text-align:left; margin:26px 0 0 0; max-width:100%; font-size:18px; }
+    .hero-actions { justify-content:flex-start; margin-top:34px; }
+    .date-badge-xl { width:112px; height:112px; flex-shrink:0; border-width:3px; }
+    .date-badge-xl .d-num { font-size:32px; }
+    .date-badge-xl .d-txt { font-size:11px; margin-top:4px; }
+    .btn-primary { display:inline-flex; width:auto; padding:16px 34px; font-size:19px; gap:3px; }
+    .btn-primary .btn-sub { font-size:13px; }
+  }
+
+  @media (max-width:480px) {
+    .price-amount { font-size:26px; }
+    .spk-topic { font-size:15px; }
+    .spk { grid-template-columns:22px 90px 1fr; gap:10px; }
+    .spk-photo { width:90px; height:90px; }
+    .hero h1 { font-size:36px; }
+    .date-badge-xl { width:96px; height:96px; }
+    .date-badge-xl .d-num { font-size:27px; }
+    .date-badge-xl .d-txt { font-size:10px; }
+    .hero::after { width:60%; opacity:0.4; }
+    .btn-primary { width:auto; padding:15px 28px; font-size:17px; }
+  }
+</style> <header class="hero"> <div class="hero-inner"> <div class="hero-top-row"> <h1>Форум продаж<br>недвижимости</h1> <div class="date-badge-xl"> <span class="d-num">13</span> <span class="d-txt">НОЯБРЯ 2026<br>11:00</span> </div> </div> <p class="hero-sub"><strong>1</strong> день, <strong>1</strong> площадка, <strong>7</strong> экспертов и <strong>7 </strong>этапов сделки от лида до подписи</p> <div class="hero-actions"> <a href="#tickets" class="btn-primary" onclick="if(window.ym){ym(111119624,'reachGoal','book_click_hero')}"> <span>Забронировать место →</span> <span class="btn-sub">всего 60 мест</span> </a> </div> </div> </header> <section class="block" id="about"> <div class="wrap"> <div class="section-head"> <h2>О форуме</h2> </div> <div class="about-grid"> <div class="about-card reveal"> <h3>Что вас ждёт</h3> <ul> <li>Встреча с 7 экспертами в рамках одного дня — тренды, инструменты и практика продаж недвижимости</li> <li>Возможность задать вопрос напрямую эксперту в конкретной отрасли</li> <li>Именной сертификат, подтверждающий участие в форуме</li> </ul> </div> <div class="about-card reveal"> <h3>Кому будет полезно</h3> <ul> <li>Менеджерам отделов продаж застройщиков</li> <li>Руководителям отделов продаж</li> <li>Агентам по продаже недвижимости</li> </ul> </div> </div> </div> </section> <section class="block" id="schedule" style="background:#fff;"> <div class="wrap"> <div class="section-head"> <h2>Программа форума</h2> <p class="block-lead">8 часов практики без воды — от трафика и переговоров до нейромаркетинга и разбора вашей воронки.</p> </div> <article class="spk reveal"> <div class="spk-num">01</div> <img class="spk-photo" src="https://www.donexpocentre.ru/media/filer_public/GG/01-irina-gelevey.jpg" alt="Ирина Гелевей" loading="lazy"> <div class="spk-body"> <div class="spk-time">10:00–11:00</div> <h3 class="spk-topic">Тренды продвижения жилой недвижимости: где искать клиентов в 2026–2027 г.</h3> <div class="spk-name">Ирина Гелевей</div> <p class="spk-bio">Маркетолог 18+ лет, международный бизнес-тренер ICBT, председатель Комитета по личному бренду и нейросетям Ростовского отделения «ОПОРА РОССИИ», руководитель агентства ТРАФИКУС <span class="spk-city">· Ростов-на-Дону</span></p> </div> </article> <div class="break">11:00–11:10 · перерыв</div> <article class="spk reveal"> <div class="spk-num">02</div> <img class="spk-photo" src="https://www.donexpocentre.ru/media/filer_public/GG/Ulitskaya.jpg" alt="Улицкая Светлана" loading="lazy"> <div class="spk-body"> <div class="spk-time">11:10–12:10</div> <h3 class="spk-topic">СПИН в недвижимости: как задавать вопросы, после которых клиент хочет работать только с вами</h3> <div class="spk-name">Улицкая Светлана</div> <p class="spk-bio">Владелец агентства недвижимости СТАРГРАД, владелец международной онлайн-школы, 50 000+ учеников по всему миру, автор книг о недвижимости, лауреат Национальной премии за вклад в развитие книжного рынка, инвестор</p> </div> </article> <article class="spk reveal"> <div class="spk-num">03</div> <img class="spk-photo" src="https://www.donexpocentre.ru/media/filer_public/GG/arharova.jpg" alt="Екатерина Архарова" loading="lazy"> <div class="spk-body"> <div class="spk-time">12:10–13:10</div> <h3 class="spk-topic">Путь клиента: где теряются деньги</h3> <div class="spk-name">Екатерина Архарова</div> <p class="spk-bio">Автор книги «Продажи недвижимости в переписке» и системы «Ледокол» — по ней продавали 1000+ специалистов на сумму свыше 100 млрд ₽ <span class="spk-city">· Краснодар</span></p> </div> </article> <div class="break">13:10–13:40 · перерыв</div> <article class="spk reveal"> <div class="spk-num">04</div> <img class="spk-photo" src="https://www.donexpocentre.ru/media/filer_public/GG/shabarov.jpg" alt="Юрий Шабаров" loading="lazy"> <div class="spk-body"> <div class="spk-time">13:40–14:10</div> <h3 class="spk-topic">Искусство ведения переговоров</h3> <div class="spk-name">Юрий Шабаров</div> <p class="spk-bio">Бизнес-тренер по продажам и переговорам, автор книги «Возражений. НЕТ» <span class="spk-city">· Краснодар</span></p> </div> </article> <article class="spk reveal"> <div class="spk-num">05</div> <img class="spk-photo" src="https://www.donexpocentre.ru/media/filer_public/GG/05-vitaliya-klimenko.jpg" alt="Виталия Клименко" loading="lazy"> <div class="spk-body"> <div class="spk-time">14:10–15:10</div> <h3 class="spk-topic">Нейромаркетинг: как влиять на подсознание покупателя недвижимости</h3> <div class="spk-name">Виталия Клименко</div> <p class="spk-bio">Предприниматель, эксперт по продажам и коммуникациям с клиентом, бизнес-тренер 16 лет, автор программ для B2B и B2C <span class="spk-city">· Ростов-на-Дону</span></p> </div> </article> <div class="break">15:10–15:20 · перерыв</div> <article class="spk reveal"> <div class="spk-num">06</div> <img class="spk-photo" src="https://www.donexpocentre.ru/media/filer_public/GG/06-elena-delibaltidis.jpg" alt="Елена Делибалтидис" loading="lazy"> <div class="spk-body"> <div class="spk-time">15:20–16:20</div> <h3 class="spk-topic">Портрет успешного продавца недвижимости</h3> <div class="spk-name">Елена Делибалтидис</div> <p class="spk-bio">Эксперт по личному бренду, председатель молодёжного комитета «ОПОРА РОССИИ», член экспертного жюри ведущих вузов Ростова <span class="spk-city">· Ростов-на-Дону</span></p> </div> </article> <article class="spk reveal"> <div class="spk-num">07</div> <img class="spk-photo" src="https://www.donexpocentre.ru/media/filer_public/GG/07-yana-guseva.jpg" alt="Яна Гусева" loading="lazy"> <div class="spk-body"> <div class="spk-time">16:20–18:00</div> <h3 class="spk-topic">ДНК сделки команды: карта управляемой конверсии в недвижимости</h3> <div class="spk-name">Яна Гусева</div> <p class="spk-bio">Постоянный спикер значимых мероприятий в сфере недвижимости, бизнес-консультант крупнейших агентств России, сертифицированный коуч — 150+ компаний за 5 лет работы тренером <span class="spk-city">· Москва</span></p> </div> </article> <div class="break">18:00–18:30 · вручение сертификатов</div> </div> </section> <div class="stats-band"> <div class="stats-row"> <div class="stats-item"><div class="stats-num">01</div><div class="stats-lbl">день форума</div></div> <div class="stats-item"><div class="stats-num">07</div><div class="stats-lbl">экспертов рынка</div></div> <div class="stats-item"><div class="stats-num">60</div><div class="stats-lbl">мест очно</div></div> <div class="stats-item"><div class="stats-num">08ч</div><div class="stats-lbl">программы</div></div> </div> </div> <section class="block" id="pricing"> <div class="blob blob-1"></div> <div class="blob blob-2"></div> <div class="blob blob-3"></div> <div class="wrap"> <div class="section-head"> <h2>Стоимость участия</h2> </div> <div class="price-grid"> <div class="price-card active reveal" onclick="this.classList.toggle('show-until')"> <span class="price-tag">Текущая цена</span> <div class="price-until">Цена до 15 сентября</div> <div class="price-amount">5000₽</div> <div class="price-hint">нажмите, чтобы увидеть цену</div> </div> <div class="price-card reveal" onclick="this.classList.toggle('show-until')"> <div class="price-until">Цена до 15 октября</div> <div class="price-amount">6000₽</div> <div class="price-hint">нажмите, чтобы увидеть цену</div> </div> <div class="price-card reveal" onclick="this.classList.toggle('show-until')"> <div class="price-until">Цена до 13 ноября</div> <div class="price-amount">8000₽</div> <div class="price-hint">нажмите, чтобы увидеть цену</div> </div> </div> </div> </section> <section class="block" id="tickets"> <div class="wrap"> <div class="tickets-card"> <h2>Забронировать место</h2> <span class="eyebrow glass-chip" style="color:#fff; margin-top:14px;">Всего 60 мест</span> <p class="block-lead">Заполните форму — мы закрепим за вами место по действующей на сегодня цене.</p> <div class="widget-shell"> <script type="text/javascript" data-cfasync="false" async="async" defer="defer" charset="UTF-8" src="https://timepad.ru/js/tpwf/loader/min/loader.js" data-timepad-customized="361645" data-twf2s-event--id="4098471" data-timepad-widget-v2="event_register"></script> </div> </div> </div> </section> <div class="countdown-band"> <div class="wrap countdown-inner"> <div class="countdown-label">До начала форума осталось</div> <div class="countdown-grid"> <div class="cd-item"><div class="cd-num" id="cdDays">00</div><div class="cd-lbl">дней</div></div> <div class="cd-sep">:</div> <div class="cd-item"><div class="cd-num" id="cdHours">00</div><div class="cd-lbl">часов</div></div> <div class="cd-sep">:</div> <div class="cd-item"><div class="cd-num" id="cdMinutes">00</div><div class="cd-lbl">минут</div></div> <div class="cd-sep">:</div> <div class="cd-item"><div class="cd-num" id="cdSeconds">00</div><div class="cd-lbl">секунд</div></div> </div> <a href="#tickets" class="countdown-cta" onclick="if(window.ym){ym(111119624,'reachGoal','book_click_countdown')}">Успеть забронировать место →</a> </div> </div> <div class="marquee"> <div class="marquee-track"> <span>Билеты в продаже</span> <span>13 ноября 2026, 11:00</span> <span>ДонЭкспоцентр, зал «Бета»</span> <span>Осталось 60 мест</span> <span>Билеты в продаже</span> <span>13 ноября 2026, 11:00</span> <span>ДонЭкспоцентр, зал «Бета»</span> <span>Осталось 60 мест</span> </div> </div> <script>
+  var revealEls = document.querySelectorAll('.reveal');
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        var el = entry.target;
+        var siblings = Array.prototype.slice.call(el.parentNode.children).filter(function(c) { return c.classList.contains('reveal'); });
+        var idx = siblings.indexOf(el);
+        el.style.transitionDelay = (idx % 8) * 90 + 'ms';
+        el.classList.add('in-view');
+        io.unobserve(el);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+  revealEls.forEach(function(el) { io.observe(el); });
+
+  var eventDate = new Date('2026-11-13T10:00:00+03:00').getTime();
+  function updateCountdown() {
+    var now = new Date().getTime();
+    var diff = eventDate - now;
+    if (diff < 0) diff = 0;
+    var days = Math.floor(diff / (1000*60*60*24));
+    var hours = Math.floor((diff % (1000*60*60*24)) / (1000*60*60));
+    var minutes = Math.floor((diff % (1000*60*60)) / (1000*60));
+    var seconds = Math.floor((diff % (1000*60)) / 1000);
+    function pad(n) { return n < 10 ? '0' + n : '' + n; }
+    document.getElementById('cdDays').textContent = pad(days);
+    document.getElementById('cdHours').textContent = pad(hours);
+    document.getElementById('cdMinutes').textContent = pad(minutes);
+    document.getElementById('cdSeconds').textContent = pad(seconds);
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+</script> <!-- nominify end --> </div> </div> <!--footer--> <footer id="t-footer" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="27715696" data-tilda-page-id="159480609" data-tilda-formskey="7b682d191f929a43838d12f727715696" data-tilda-cookie="no" data-tilda-lazy="yes" data-tilda-root-zone="com" data-tilda-project-country="RU"> <div id="rec2556731901" class="r t-rec" style=" " data-record-type="1370"> <!-- T1370 --> <div class="t1370"> <!-- nominify begin --> <link rel="preconnect" href="https://fonts.googleapis.com"> <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap" rel="stylesheet"> <style>
+  :root {
+    --blue-deep: #0F1B4D;
+    --orange: #E8622C;
+    --orange-2: #FF8A50;
+  }
+  footer, footer *,
+  .to-top {
+    box-sizing:border-box; margin:0; padding:0;
+  }
+  footer a { color:inherit; text-decoration:none; }
+  .to-top { cursor:pointer; font-family:inherit; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    position:relative; overflow:hidden;
+    background:linear-gradient(200deg, var(--blue-deep) 60%, #2a1f5e 100%);
+    color:rgba(255,255,255,0.75); padding:44px 0; font-size:16px;
+    font-family:Arial,sans-serif;
+    scroll-margin-top:90px;
+  }
+  footer::before {
+    content:""; position:absolute; top:0; left:0; right:0; height:90px; z-index:0; pointer-events:none;
+    background:linear-gradient(180deg, rgba(232,98,44,0.3), transparent 100%);
+  }
+  .footer-wrap { max-width:1080px; margin:0 auto; padding:0 24px; }
+  .footer-card {
+    position:relative; z-index:1; display:flex; align-items:center; gap:22px; flex-wrap:wrap;
+    background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.14);
+    border-radius:24px; padding:20px 24px;
+  }
+  .footer-brand { display:flex; align-items:center; gap:12px; padding-right:18px; border-right:1px solid rgba(255,255,255,0.16); }
+  .footer-logo-img { height:36px; width:auto; flex-shrink:0; display:block; }
+  .footer-brand-txt { color:#fff; font-family:'Oswald',sans-serif; font-weight:600; font-size:13px; letter-spacing:0.05em; line-height:1.3; }
+
+  .footer-person {
+    display:inline-flex; align-items:center; gap:12px;
+    background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.16);
+    border-radius:100px; padding:8px 22px 8px 8px;
+  }
+  .footer-person .ico {
+    width:36px; height:36px; border-radius:50%; flex-shrink:0;
+    background:var(--orange); display:flex; align-items:center; justify-content:center;
+  }
+  .footer-person .ico svg { width:18px; height:18px; }
+  .footer-person .name-txt { color:#fff; font-size:19px; font-weight:700; line-height:1.25; }
+  .footer-person .name-txt small { display:block; color:rgba(255,255,255,0.55); font-size:12.5px; font-weight:500; }
+
+  .contact-chip {
+    display:inline-flex; align-items:center; gap:10px;
+    background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.16);
+    border-radius:100px; padding:9px 18px 9px 9px;
+    transition:background 0.15s ease, transform 0.15s ease, border-color 0.15s ease;
+  }
+  .contact-chip:hover { background:rgba(232,98,44,0.18); border-color:rgba(232,98,44,0.45); transform:translateX(-2px); }
+  .contact-chip .ico {
+    width:30px; height:30px; border-radius:50%; flex-shrink:0;
+    background:var(--orange); display:flex; align-items:center; justify-content:center;
+  }
+  .contact-chip .ico svg { width:15px; height:15px; }
+  .contact-chip .txt { color:#fff; font-size:16px; font-weight:600; letter-spacing:0.01em; }
+
+  @media (max-width:720px) {
+    .footer-card { padding:20px; }
+    .footer-brand { border-right:none; padding-right:0; width:100%; border-bottom:1px solid rgba(255,255,255,0.16); padding-bottom:16px; }
+  }
+  @media (max-width:480px) {
+    .contact-chip .txt { font-size:15px; }
+    .footer-person .name-txt { font-size:17px; }
+  }
+
+  /* ===== BACK TO TOP ===== */
+  .to-top {
+    position:fixed; right:22px; bottom:22px; z-index:400;
+    width:48px; height:48px; border-radius:50%; border:none;
+    background:var(--orange); color:#fff; font-size:20px;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 12px 28px rgba(232,98,44,0.4);
+    opacity:0; transform:translateY(12px); pointer-events:none;
+    transition:opacity 0.25s ease, transform 0.25s ease;
+  }
+  .to-top.show { opacity:1; transform:translateY(0); pointer-events:auto; }
+</style> <footer id="contacts"> <div class="footer-wrap"> <div class="footer-card"> <div class="footer-brand"> <img class="footer-logo-img" src="https://www.donexpocentre.ru/media/filer_public/GG/kvc_logo.png" alt="ДонЭкспоцентр"> <div class="footer-brand-txt">ВЫСТАВКИ<br>И СОБЫТИЯ</div> </div> <div class="footer-person"> <span class="ico"><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.6" fill="#fff"/><path d="M4.5 20c1.4-3.6 4.4-5.5 7.5-5.5s6.1 1.9 7.5 5.5" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/></svg></span> <span class="name-txt">Меняева Елена<small>Руководитель проекта</small></span> </div> <a class="contact-chip" href="tel:88632687750"> <span class="ico"><svg viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.9 21 3 13.1 3 3.9c0-.5.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.3 1.1L6.6 10.8Z" fill="#fff"/></svg></span> <span class="txt">8 (863) 268-77-50</span> </a> <a class="contact-chip" href="mailto:proekt@donexpocentre.ru"> <span class="ico"><svg viewBox="0 0 24 24" fill="none"><path d="M3 6.5C3 5.7 3.7 5 4.5 5h15c.8 0 1.5.7 1.5 1.5v11c0 .8-.7 1.5-1.5 1.5h-15c-.8 0-1.5-.7-1.5-1.5v-11Z" stroke="#fff" stroke-width="1.6"/><path d="M4 6.5 12 13l8-6.5" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span> <span class="txt">proekt@donexpocentre.ru</span> </a> </div> </div> </footer> <button class="to-top" id="toTopBtn" aria-label="Наверх">↑</button> <script>
+  var toTopBtn = document.getElementById('toTopBtn');
+  if (toTopBtn) {
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 600) {
+        toTopBtn.classList.add('show');
+      } else {
+        toTopBtn.classList.remove('show');
+      }
+    });
+    toTopBtn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+</script> <!-- nominify end --> </div> </div> </footer> <!--/footer--> </div> <!--/allrecords-->
