@@ -3,16 +3,16 @@ function t_onFuncLoad(funcName,okFunc,time) {if(typeof window[funcName]==='funct
 document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head> <body class="t-body" style="margin:0;"> <!--allrecords--> <div id="allrecords" data-tilda-export="yes" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="27715696" data-tilda-page-id="156340926" data-tilda-formskey="7b682d191f929a43838d12f727715696" data-tilda-cookie="no" data-tilda-lazy="yes" data-tilda-root-zone="com" data-tilda-project-country="RU"> <!--header--> <header id="t-header" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="27715696" data-tilda-page-id="159477409" data-tilda-formskey="7b682d191f929a43838d12f727715696" data-tilda-cookie="no" data-tilda-lazy="yes" data-tilda-root-zone="com" data-tilda-project-country="RU"> <div id="rec2556683501" class="r t-rec" style=" " data-record-type="1370"> <!-- T1370 --> <div class="t1370"> <!-- nominify begin -->
 <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Onest:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"> <style>
   :root {
-    --ink:#131019;
-    --ink-2:#1B1724;
-    --ink-3:#2A2436;
-    --ink-4:#3B3450;
-    --paper:#E5E2D9;
-    --paper-2:#D3CFC2;
-    --lit:#FFC24B;
-    --lit-soft:#FFD98A;
-    --lit-deep:#C97F14;
-    --draft:#8C93A8;
+    --ink:#0F1B4D;
+    --ink-2:#16265F;
+    --ink-3:#24358A;
+    --ink-4:#3B4FA8;
+    --paper:#F7F7FA;
+    --paper-2:#E7E8F0;
+    --lit:#E8622C;
+    --lit-soft:#FF8A50;
+    --lit-deep:#C4471A;
+    --draft:#8E9AD1;
     --f-display:'Unbounded','Onest',Arial,sans-serif;
     --f-body:'Onest',Arial,sans-serif;
     --f-mono:'IBM Plex Mono','Courier New',monospace;
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
   .loader-facade i:nth-child(9) { animation-delay:0.30s }
   @keyframes winOn {
     0%, 100% { background:var(--ink-2); box-shadow:none; }
-    35%, 60% { background:var(--lit); box-shadow:0 0 14px rgba(255,194,75,0.55); }
+    35%, 60% { background:var(--lit); box-shadow:0 0 14px rgba(232,98,44,0.55); }
   }
   .loader-text {
     color:var(--draft); font-family:var(--f-mono); letter-spacing:0.22em;
@@ -62,12 +62,12 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
   /* ===== TOPBAR ===== */
   .topbar {
     position:sticky; top:0; z-index:500;
-    background:rgba(19,16,25,0.82);
+    background:rgba(10,20,62,0.82);
     -webkit-backdrop-filter:blur(14px) saturate(140%); backdrop-filter:blur(14px) saturate(140%);
     border-bottom:1px solid rgba(255,255,255,0.07);
     transition:background 0.25s ease, border-color 0.25s ease;
   }
-  .topbar.scrolled { background:rgba(19,16,25,0.96); border-bottom-color:rgba(255,194,75,0.28); }
+  .topbar.scrolled { background:rgba(10,20,62,0.96); border-bottom-color:rgba(232,98,44,0.28); }
   .topbar-inner {
     max-width:1180px; margin:0 auto; padding:11px 26px;
     display:flex; align-items:center; justify-content:space-between; gap:18px;
@@ -83,15 +83,17 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
   .topbar-meta {
     font-family:var(--f-mono); font-size:11px; letter-spacing:0.08em;
     color:var(--draft); text-transform:uppercase; white-space:nowrap;
+    transition:opacity 0.16s ease, transform 0.16s ease;
   }
+  .topbar-meta.swap { opacity:0; transform:translateY(-4px); }
   .topbar-cta {
     position:relative; background:var(--lit); color:var(--ink);
     font-family:var(--f-mono); font-weight:500; text-transform:uppercase;
     font-size:11px; letter-spacing:0.1em; padding:11px 20px;
     white-space:nowrap; transition:background 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
-    box-shadow:0 0 0 rgba(255,194,75,0);
+    box-shadow:0 0 0 rgba(232,98,44,0);
   }
-  .topbar-cta:hover { background:var(--lit-soft); box-shadow:0 6px 26px rgba(255,194,75,0.35); }
+  .topbar-cta:hover { background:var(--lit-soft); box-shadow:0 6px 26px rgba(232,98,44,0.35); }
   .burger {
     width:38px; height:38px; border:1px solid rgba(255,255,255,0.16);
     background:transparent; display:flex; align-items:center; justify-content:center;
@@ -137,7 +139,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
     .loader-facade i { animation:none; background:var(--lit); }
     .nav-panel, .nav-panel a, .topbar, .topbar-cta, .burger span { transition:none; }
   }
-</style> <div id="loader"> <div class="loader-facade"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div> <div class="loader-text">Свет включается…</div> </div> <div class="topbar" id="topbar"> <div class="topbar-inner"> <a class="topbar-brand" href="#top"> <img class="topbar-logo" src="https://www.donexpocentre.ru/media/filer_public/GG/kvc_logo.png" alt="ДонЭкспоцентр"> <span class="topbar-name">Форум продаж<b>недвижимости</b></span> </a> <div class="topbar-right"> <span class="topbar-meta">13.11.26 · Ростов-на-Дону</span> <a href="#tickets" class="topbar-cta" onclick="if(window.ym){ym(111119624,'reachGoal','book_click_header')}">Забронировать место</a> <button class="burger" id="burgerBtn" aria-label="Меню" aria-expanded="false" aria-controls="navPanel"> <span></span><span></span><span></span> </button> </div> </div> <div class="nav-panel" id="navPanel"> <div class="nav-panel-inner"> <a href="#about"><i>01</i>О форуме</a> <a href="#schedule"><i>02</i>Программа форума</a> <a href="#pricing"><i>03</i>Стоимость участия</a> <a href="#tickets"><i>04</i>Забронировать место</a> <a href="#contacts"><i>05</i>Контакты</a> </div> </div> </div> <script>
+</style> <div id="loader"> <div class="loader-facade"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div> <div class="loader-text">Свет включается…</div> </div> <div class="topbar" id="topbar"> <div class="topbar-inner"> <a class="topbar-brand" href="#top"> <img class="topbar-logo" src="https://www.donexpocentre.ru/media/filer_public/GG/kvc_logo.png" alt="ДонЭкспоцентр"> <span class="topbar-name">Форум продаж<b>недвижимости</b></span> </a> <div class="topbar-right"> <span class="topbar-meta" id="topbarMeta">13.11.26 · Ростов-на-Дону</span> <a href="#tickets" class="topbar-cta" onclick="if(window.ym){ym(111119624,'reachGoal','book_click_header')}">Забронировать место</a> <button class="burger" id="burgerBtn" aria-label="Меню" aria-expanded="false" aria-controls="navPanel"> <span></span><span></span><span></span> </button> </div> </div> <div class="nav-panel" id="navPanel"> <div class="nav-panel-inner"> <a href="#about"><i>01</i>О форуме</a> <a href="#schedule"><i>02</i>Программа форума</a> <a href="#pricing"><i>03</i>Стоимость участия</a> <a href="#tickets"><i>04</i>Забронировать место</a> <a href="#contacts"><i>05</i>Контакты</a> </div> </div> </div> <script>
   window.addEventListener('load', function() {
     setTimeout(function() {
       var l = document.getElementById('loader');
@@ -196,17 +198,17 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
   ym(111119624, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
 </script> <noscript><div><img src="https://mc.yandex.ru/watch/111119624" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter --> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Onest:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"> <style>
   :root {
-    --ink:#131019;
-    --ink-2:#1B1724;
-    --ink-3:#2A2436;
-    --ink-4:#3B3450;
-    --paper:#E5E2D9;
-    --paper-2:#D3CFC2;
-    --paper-ink:#1A1622;
-    --lit:#FFC24B;
-    --lit-soft:#FFD98A;
-    --lit-deep:#C97F14;
-    --draft:#8C93A8;
+    --ink:#0F1B4D;
+    --ink-2:#16265F;
+    --ink-3:#24358A;
+    --ink-4:#3B4FA8;
+    --paper:#F7F7FA;
+    --paper-2:#E7E8F0;
+    --paper-ink:#12172E;
+    --lit:#E8622C;
+    --lit-soft:#FF8A50;
+    --lit-deep:#C4471A;
+    --draft:#8E9AD1;
     --skyline:url('https://www.donexpocentre.ru/media/filer_public/GG/doma.png');
     --f-display:'Unbounded','Onest',Arial,sans-serif;
     --f-body:'Onest',Arial,sans-serif;
@@ -226,6 +228,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
 
   .wrap { max-width:1180px; margin:0 auto; padding:0 26px; }
   .block { position:relative; padding:clamp(70px,8.5vw,124px) 0; scroll-margin-top:72px; }
+  .seam + .block { padding-top:clamp(48px,5.4vw,78px); }
   .block--paper { background:var(--paper); color:var(--paper-ink); }
   .block--ink { background:var(--ink); color:var(--paper); }
 
@@ -246,9 +249,9 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
   .block--ink .section-head h2 { color:#fff; }
   .block-lead {
     font-size:clamp(15px,1.7vw,18px); line-height:1.6; margin-top:20px;
-    max-width:640px; color:rgba(26,22,34,0.68);
+    max-width:640px; color:rgba(18,23,46,0.68);
   }
-  .block--ink .block-lead { color:rgba(229,226,217,0.62); }
+  .block--ink .block-lead { color:rgba(247,247,250,0.62); }
 
   /* nothing is hidden unless scripting is there to bring it back */
   .reveal { transition:opacity 0.75s cubic-bezier(0.22,1,0.36,1), transform 0.75s cubic-bezier(0.22,1,0.36,1); }
@@ -264,9 +267,9 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
   .hero::before {
     content:""; position:absolute; inset:0; pointer-events:none;
     background-image:
-      radial-gradient(115% 80% at 82% 42%, rgba(255,194,75,0.14) 0%, transparent 58%),
-      repeating-linear-gradient(90deg, rgba(255,255,255,0.032) 0 1px, transparent 1px 84px),
-      repeating-linear-gradient(0deg, rgba(255,255,255,0.032) 0 1px, transparent 1px 84px);
+      radial-gradient(115% 80% at 82% 42%, rgba(232,98,44,0.22) 0%, transparent 58%),
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.045) 0 1px, transparent 1px 84px),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.045) 0 1px, transparent 1px 84px);
   }
   .hero::after {
     content:""; position:absolute; left:0; right:0; bottom:0; height:36%;
@@ -279,7 +282,8 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
     display:grid; grid-template-columns:minmax(0,1fr) minmax(0,440px);
     gap:clamp(30px,4.5vw,64px); align-items:center;
   }
-  .hero-copy { container-type:inline-size; }
+  .hero-copy { container-type:inline-size; will-change:transform; }
+  .facade { will-change:transform; }
   .hero h1 {
     color:#fff; font-size:clamp(24px,4.6vw,58px); line-height:0.98;
     text-transform:uppercase; margin:26px 0 0;
@@ -298,7 +302,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
     color:transparent; -webkit-text-stroke:1.4px var(--lit); text-stroke:1.4px var(--lit);
   }
   .hero-sub {
-    color:rgba(229,226,217,0.72); font-size:clamp(15px,1.9vw,20px); line-height:1.55;
+    color:rgba(247,247,250,0.72); font-size:clamp(15px,1.9vw,20px); line-height:1.55;
     max-width:520px; margin-top:26px;
   }
   .hero-sub b { color:#fff; font-family:var(--f-mono); font-weight:500; font-size:0.92em; }
@@ -309,9 +313,9 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
     font-family:var(--f-mono); font-weight:500; font-size:14px; letter-spacing:0.06em;
     text-transform:uppercase; padding:19px 30px;
     transition:transform 0.2s ease, box-shadow 0.25s ease, background 0.2s ease;
-    box-shadow:0 14px 40px rgba(255,194,75,0.22);
+    box-shadow:0 14px 40px rgba(232,98,44,0.22);
   }
-  .btn-primary:hover { transform:translateY(-2px); background:var(--lit-soft); box-shadow:0 18px 48px rgba(255,194,75,0.34); }
+  .btn-primary:hover { transform:translateY(-2px); background:var(--lit-soft); box-shadow:0 18px 48px rgba(232,98,44,0.34); }
   .btn-primary .btn-sub { font-size:11px; letter-spacing:0.1em; opacity:0.62; }
   .hero-note {
     font-family:var(--f-mono); font-size:11px; letter-spacing:0.13em; text-transform:uppercase;
@@ -321,7 +325,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
   /* the facade itself */
   .facade { position:relative; }
   .facade-roof, .facade-base { height:9px; background:var(--ink-3); }
-  .facade-base { height:14px; background:linear-gradient(180deg, var(--ink-3), rgba(42,36,54,0)); }
+  .facade-base { height:14px; background:linear-gradient(180deg, var(--ink-3), rgba(36,53,138,0)); }
   .facade-grid {
     display:grid; grid-template-columns:repeat(3,1fr); gap:2px;
     background:var(--ink-3); padding:2px;
@@ -334,25 +338,29 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
   html.js .win { opacity:0; transform:translateY(10px); }
   html.js .win.lit { opacity:1; transform:none; }
   .win img {
-    width:100%; height:100%; object-fit:cover; object-position:50% 20%; display:block;
-    filter:brightness(0.28) saturate(0.35) contrast(1.05);
-    transform:scale(1.06);
-    transition:filter 0.85s ease, transform 0.85s ease;
+    width:100%; height:100%; object-fit:cover; display:block;
+    transform-origin:50% 0; transition:transform 0.5s ease;
   }
-  .win.lit img { filter:brightness(1) saturate(1) contrast(1); transform:scale(1); }
+  .win::before {
+    content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
+    background:var(--ink); opacity:0;
+    transition:opacity 0.85s ease;
+  }
+  html.js .win::before { opacity:0.88; }
+  html.js .win.lit::before { opacity:0; }
   .win::after {
-    content:""; position:absolute; inset:0; pointer-events:none;
-    background:linear-gradient(205deg, rgba(255,194,75,0.34) 0%, transparent 46%);
-    box-shadow:inset 0 0 0 1px rgba(255,194,75,0);
+    content:""; position:absolute; inset:0; z-index:2; pointer-events:none;
+    background:linear-gradient(205deg, rgba(232,98,44,0.18) 0%, transparent 46%);
+    box-shadow:inset 0 0 0 1px rgba(232,98,44,0);
     opacity:0; transition:opacity 0.85s ease, box-shadow 0.3s ease;
   }
   .win.lit::after { opacity:1; }
-  .win:hover img, .win:focus-visible img { filter:brightness(1.12) saturate(1.05); transform:scale(1.05); }
-  .win:hover::after, .win:focus-visible::after { box-shadow:inset 0 0 0 1px rgba(255,194,75,0.7); }
+  .win:hover img, .win:focus-visible img { transform:scale(1.045); }
+  .win:hover::after, .win:focus-visible::after { box-shadow:inset 0 0 0 1px rgba(232,98,44,0.7); }
   .win:focus-visible { outline:2px solid var(--lit); outline-offset:2px; }
   .win-name {
-    position:absolute; left:0; right:0; bottom:0; z-index:2;
-    padding:9px 10px; background:linear-gradient(0deg, rgba(19,16,25,0.94), rgba(19,16,25,0));
+    position:absolute; left:0; right:0; bottom:0; z-index:3;
+    padding:9px 10px; background:linear-gradient(0deg, rgba(10,20,62,0.94), rgba(10,20,62,0));
     color:#fff; font-family:var(--f-mono); font-size:10px; letter-spacing:0.04em; line-height:1.3;
     transform:translateY(101%); transition:transform 0.28s cubic-bezier(0.22,1,0.36,1);
   }
@@ -363,12 +371,51 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
   }
   .win-plate .p-big { font-family:var(--f-display); font-weight:800; font-size:clamp(24px,3.4vw,36px); line-height:0.9; letter-spacing:-0.04em; }
   .win-plate .p-small { font-family:var(--f-mono); font-size:10px; letter-spacing:0.12em; text-transform:uppercase; margin-top:7px; line-height:1.4; }
-  .win-plate--quiet { background:var(--ink-2); color:var(--lit); box-shadow:inset 0 0 0 1px rgba(255,194,75,0.28); }
+  .win-plate--quiet { background:var(--ink-2); color:var(--lit); box-shadow:inset 0 0 0 1px rgba(232,98,44,0.28); }
   .win-plate--quiet .p-big { font-family:var(--f-mono); font-weight:500; font-size:clamp(15px,2.1vw,20px); letter-spacing:0.01em; }
   .facade-cap {
     display:flex; justify-content:space-between; gap:12px; margin-top:12px;
     font-family:var(--f-mono); font-size:10px; letter-spacing:0.13em;
     text-transform:uppercase; color:var(--draft);
+  }
+
+  /* ============ SEAM: the floor slab between two rooms ============ */
+  .seam { position:relative; }
+  .seam--paper { background:var(--paper); color:var(--paper-ink); }
+  .seam--ink { background:var(--ink); color:var(--paper); }
+  .seam::before {
+    content:""; display:block; height:11px;
+    background-image:repeating-linear-gradient(45deg, rgba(232,98,44,0.30) 0 5px, transparent 5px 11px);
+    border-bottom:1px solid var(--paper-2);
+  }
+  .seam--ink::before { border-bottom-color:var(--ink-3); }
+  .seam-inner {
+    display:flex; align-items:center; gap:clamp(14px,2.4vw,26px);
+    padding-top:19px; padding-bottom:19px;
+  }
+  .seam-name, .seam-fact {
+    font-family:var(--f-mono); font-size:11px; font-weight:500; letter-spacing:0.16em;
+    text-transform:uppercase; white-space:nowrap;
+    opacity:0; transform:translateY(6px);
+    transition:opacity 0.5s ease, transform 0.5s ease;
+  }
+  .seam-name { color:var(--lit-deep); }
+  .seam--ink .seam-name { color:var(--lit); }
+  .seam-fact { color:rgba(18,23,46,0.5); }
+  .seam--ink .seam-fact { color:var(--draft); }
+  .seam.in-view .seam-name, .seam.in-view .seam-fact { opacity:1; transform:none; }
+  .seam.in-view .seam-fact { transition-delay:0.12s; }
+  /* a dimension line: end ticks, and a measure that draws as you pass */
+  .seam-rule { position:relative; flex:1 1 auto; height:9px; min-width:30px; }
+  .seam-rule::before, .seam-rule::after {
+    content:""; position:absolute; top:0; bottom:0; width:1px; background:var(--paper-2);
+  }
+  .seam--ink .seam-rule::before, .seam--ink .seam-rule::after { background:var(--ink-3); }
+  .seam-rule::before { left:0; }
+  .seam-rule::after { right:0; }
+  .seam-rule i {
+    position:absolute; left:0; right:0; top:50%; height:1px; background:var(--lit);
+    transform-origin:left center; transform:scaleX(0);
   }
 
   /* ============ ABOUT ============ */
@@ -381,7 +428,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
   .about-card ul { list-style:none; }
   .about-card li {
     position:relative; padding:15px 0 15px 30px; font-size:15px; line-height:1.6;
-    color:rgba(26,22,34,0.78); border-top:1px solid var(--paper-2);
+    color:rgba(18,23,46,0.78); border-top:1px solid var(--paper-2);
   }
   .about-card li::before {
     content:""; position:absolute; left:0; top:23px; width:14px; height:1px; background:var(--lit-deep);
@@ -404,14 +451,14 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
   .spk-mark { position:relative; padding-left:18px; padding-top:4px; }
   .spk-mark::before {
     content:""; position:absolute; left:0; top:14px; width:11px; height:1px;
-    background:rgba(140,147,168,0.55);
+    background:rgba(142,154,209,0.55);
     transition:background 0.3s ease, width 0.3s ease;
   }
   .spk:hover .spk-mark::before { background:var(--lit); width:15px; }
   .spk-num {
     font-family:var(--f-display); font-weight:800; font-size:30px; line-height:1;
     color:transparent;
-    -webkit-text-stroke:1px rgba(140,147,168,0.5); text-stroke:1px rgba(140,147,168,0.5);
+    -webkit-text-stroke:1px rgba(142,154,209,0.5); text-stroke:1px rgba(142,154,209,0.5);
     transition:-webkit-text-stroke-color 0.3s ease;
   }
   .spk:hover .spk-num { -webkit-text-stroke-color:var(--lit); }
@@ -420,21 +467,28 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
     letter-spacing:0.06em; color:var(--lit); white-space:nowrap;
   }
   .spk-photo-wrap {
-    position:relative; aspect-ratio:4/5; overflow:hidden; background:var(--ink-2);
+    position:relative; aspect-ratio:4/5; background:var(--ink-2);
+    /* light spills out onto the dark facade as the window brightens */
+    box-shadow:0 8px 64px -20px rgba(232,98,44, calc(0.62 * var(--glow, 0)));
   }
+  .spk-photo-wrap > img { position:relative; z-index:0; }
+  .spk-photo-wrap { overflow:hidden; }
   .spk-photo {
-    width:100%; height:100%; object-fit:cover; object-position:50% 20%; display:block;
-    transform:scale(1.09); transition:transform 1.3s cubic-bezier(0.22,1,0.36,1), filter 0.5s ease;
+    width:100%; height:100%; object-fit:cover; display:block;
+    transform-origin:50% 0; transition:transform 0.6s cubic-bezier(0.22,1,0.36,1);
   }
-  .spk.in-view .spk-photo { transform:scale(1); }
+  .spk:hover .spk-photo { transform:scale(1.03); }
+  /* the lit layer: a warm frame that brightens on approach, never a wash over the face */
   .spk-photo-wrap::after {
-    content:""; position:absolute; inset:0; pointer-events:none;
-    background:linear-gradient(202deg, rgba(255,194,75,0.28) 0%, transparent 44%);
-    box-shadow:inset 0 0 0 1px rgba(255,194,75,0.16);
-    transition:box-shadow 0.3s ease, opacity 0.5s ease;
+    content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
+    box-shadow:inset 0 0 0 1px rgba(232,98,44,0.22);
+    opacity:1;
   }
-  .spk:hover .spk-photo { filter:brightness(1.07); }
-  .spk:hover .spk-photo-wrap::after { box-shadow:inset 0 0 0 1px rgba(255,194,75,0.55); }
+  .spk-photo-wrap::before {
+    content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
+    box-shadow:inset 0 0 0 2px rgba(232,98,44,0.9), inset 0 0 40px rgba(232,98,44,0.18);
+    opacity:var(--glow, 0);
+  }
   .spk-body { padding-top:2px; }
   .spk-topic {
     font-size:clamp(19px,2.3vw,28px); line-height:1.18; text-transform:none;
@@ -443,9 +497,9 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
   .spk-name {
     display:inline-block; margin-top:20px; font-family:var(--f-mono); font-size:13px;
     letter-spacing:0.1em; text-transform:uppercase; color:var(--lit);
-    border-bottom:1px solid rgba(255,194,75,0.3); padding-bottom:4px;
+    border-bottom:1px solid rgba(232,98,44,0.3); padding-bottom:4px;
   }
-  .spk-bio { margin-top:18px; font-size:14.5px; line-height:1.65; color:rgba(229,226,217,0.6); max-width:520px; }
+  .spk-bio { margin-top:18px; font-size:14.5px; line-height:1.65; color:rgba(247,247,250,0.6); max-width:520px; }
   .spk-city { color:var(--draft); white-space:nowrap; }
 
   .break {
@@ -455,7 +509,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
     background-image:repeating-linear-gradient(45deg, rgba(255,255,255,0.05) 0 5px, transparent 5px 11px);
     border-top:1px solid var(--ink-3); border-bottom:1px solid var(--ink-3);
   }
-  .break--final { color:var(--lit); background-image:repeating-linear-gradient(45deg, rgba(255,194,75,0.13) 0 5px, transparent 5px 11px); border-color:rgba(255,194,75,0.28); }
+  .break--final { color:var(--lit); background-image:repeating-linear-gradient(45deg, rgba(232,98,44,0.13) 0 5px, transparent 5px 11px); border-color:rgba(232,98,44,0.28); }
 
   /* ============ PLINTH / STATS ============ */
   .stats-band {
@@ -473,6 +527,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
   .stats-num {
     font-family:var(--f-display); font-weight:800; font-size:clamp(32px,4.6vw,52px);
     line-height:0.9; letter-spacing:-0.045em; color:var(--lit);
+    font-variant-numeric:tabular-nums;
   }
   .stats-lbl {
     margin-top:12px; font-family:var(--f-mono); font-size:11px; letter-spacing:0.13em;
@@ -491,7 +546,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
     content:""; position:absolute; left:0; top:0; bottom:0; width:3px; background:var(--ink-4);
     transition:background 0.25s ease;
   }
-  .price-card:hover { transform:translateY(-5px); box-shadow:0 22px 44px rgba(19,16,25,0.24); }
+  .price-card:hover { transform:translateY(-5px); box-shadow:0 22px 44px rgba(10,20,62,0.24); }
   .price-card:hover::before { background:var(--lit); }
   .price-card:focus-visible { outline:2px solid var(--lit-deep); outline-offset:3px; }
   .price-card.active { background:var(--lit); color:var(--ink); }
@@ -505,7 +560,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
     font-family:var(--f-mono); font-size:11px; letter-spacing:0.11em; text-transform:uppercase;
     color:var(--draft);
   }
-  .price-card.active .price-until { color:rgba(19,16,25,0.62); }
+  .price-card.active .price-until { color:rgba(10,20,62,0.62); }
   .price-reveal { position:relative; display:block; margin-top:14px; align-self:stretch; }
   .price-amount {
     display:block; font-family:var(--f-display); font-weight:800;
@@ -525,13 +580,13 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
     margin-top:16px; font-family:var(--f-mono); font-size:10px; letter-spacing:0.13em;
     text-transform:uppercase; color:var(--draft); transition:opacity 0.3s ease;
   }
-  .price-card.active .price-hint { color:rgba(19,16,25,0.5); }
+  .price-card.active .price-hint { color:rgba(10,20,62,0.5); }
   .price-card.show-until .price-hint { opacity:0; }
 
   /* ============ TICKETS ============ */
   .tickets-card { background:var(--ink); color:var(--paper); padding:clamp(28px,3.6vw,48px); }
   .tickets-card h2 { color:#fff; font-size:clamp(26px,3.8vw,44px); text-transform:uppercase; line-height:1; margin-top:18px; }
-  .tickets-card .block-lead { color:rgba(229,226,217,0.62); }
+  .tickets-card .block-lead { color:rgba(247,247,250,0.62); }
   .widget-shell { margin-top:30px; background:#fff; padding:16px; min-height:220px; }
 
   /* ============ COUNTDOWN ============ */
@@ -554,7 +609,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
   .countdown-cta {
     display:inline-flex; align-items:center; gap:11px; text-decoration:none;
     font-family:var(--f-mono); font-size:12px; letter-spacing:0.1em; text-transform:uppercase;
-    color:var(--lit); padding-bottom:6px; border-bottom:1px solid rgba(255,194,75,0.35);
+    color:var(--lit); padding-bottom:6px; border-bottom:1px solid rgba(232,98,44,0.35);
     transition:gap 0.2s ease, border-color 0.2s ease;
   }
   .countdown-cta:hover { gap:18px; border-bottom-color:var(--lit); }
@@ -606,9 +661,15 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
     .win img, .spk-photo { transform:none; filter:none; }
     .marquee-track { animation:none; }
     .rail-fill { transform:scaleY(1) !important; }
+    .seam-rule i { transform:scaleX(1) !important; }
+    .seam-name, .seam-fact { opacity:1 !important; transform:none !important; }
+    .hero-copy, .facade { transform:none !important; opacity:1 !important; }
+    .spk-photo { transform:none !important; }
+    .spk-photo-wrap::after { opacity:0.35 !important; }
+    .win::before { transition:none; }
     .price-film, .win-name, .spk-photo, .price-card, .btn-primary { transition:none; }
   }
-</style> <script>document.documentElement.classList.add('js');</script> <header class="hero" id="top"> <div class="hero-inner"> <div class="hero-copy"> <span class="eyebrow">ДонЭкспоцентр · зал «Бета» · 11:00</span> <h1> <span class="h1-line"><span>Форум</span></span> <span class="h1-line"><span>продаж</span></span> <span class="h1-line"><span class="h1-outline">Недвижимости</span></span> </h1> <p class="hero-sub"><b>1</b> день, <b>1</b> площадка, <b>7</b> экспертов и <b>7</b> этапов сделки — от лида до подписи</p> <div class="hero-actions"> <a href="#tickets" class="btn-primary" onclick="if(window.ym){ym(111119624,'reachGoal','book_click_hero')}"> Забронировать место <span class="btn-sub">осталось 60 мест</span> </a> <div class="hero-note">13 ноября 2026<br>Ростов-на-Дону</div> </div> </div> <div class="facade" id="facade"> <div class="facade-roof"></div> <div class="facade-grid"> <div class="win win-plate"> <span class="p-big">13</span> <span class="p-small">ноября<br>2026</span> </div> <a class="win" href="#schedule"> <img src="https://www.donexpocentre.ru/media/filer_public/GG/01-irina-gelevey.jpg" alt="Ирина Гелевей" loading="lazy"> <span class="win-name">Ирина Гелевей</span> </a> <a class="win" href="#schedule"> <img src="https://www.donexpocentre.ru/media/filer_public/GG/Ulitskaya.jpg" alt="Улицкая Светлана" loading="lazy"> <span class="win-name">Улицкая Светлана</span> </a> <a class="win" href="#schedule"> <img src="https://www.donexpocentre.ru/media/filer_public/GG/arharova.jpg" alt="Екатерина Архарова" loading="lazy"> <span class="win-name">Екатерина Архарова</span> </a> <a class="win" href="#schedule"> <img src="https://www.donexpocentre.ru/media/filer_public/GG/shabarov.jpg" alt="Юрий Шабаров" loading="lazy"> <span class="win-name">Юрий Шабаров</span> </a> <a class="win" href="#schedule"> <img src="https://www.donexpocentre.ru/media/filer_public/GG/05-vitaliya-klimenko.jpg" alt="Виталия Клименко" loading="lazy"> <span class="win-name">Виталия Клименко</span> </a> <a class="win" href="#schedule"> <img src="https://www.donexpocentre.ru/media/filer_public/GG/06-elena-delibaltidis.jpg" alt="Елена Делибалтидис" loading="lazy"> <span class="win-name">Елена Делибалтидис</span> </a> <a class="win" href="#schedule"> <img src="https://www.donexpocentre.ru/media/filer_public/GG/07-yana-guseva.jpg" alt="Яна Гусева" loading="lazy"> <span class="win-name">Яна Гусева</span> </a> <div class="win win-plate win-plate--quiet"> <span class="p-big">10:00</span> <span class="p-small">до 18:30</span> </div> </div> <div class="facade-base"></div> <div class="facade-cap"> <span>Спикеры форума</span> <span>Ростов-на-Дону</span> </div> </div> </div> </header> <section class="block block--paper" id="about"> <div class="wrap"> <div class="section-head"> <span class="eyebrow">Один день · 13 ноября 2026</span> <h2>О форуме</h2> </div> <div class="about-grid"> <div class="about-card reveal"> <span class="eyebrow">Программа</span> <h3>Что вас ждёт</h3> <ul> <li>Встреча с 7 экспертами в рамках одного дня — тренды, инструменты и практика продаж недвижимости</li> <li>Возможность задать вопрос напрямую эксперту в конкретной отрасли</li> <li>Именной сертификат, подтверждающий участие в форуме</li> </ul> </div> <div class="about-card reveal"> <span class="eyebrow">Аудитория</span> <h3>Кому будет полезно</h3> <ul> <li>Менеджерам отделов продаж застройщиков</li> <li>Руководителям отделов продаж</li> <li>Агентам по продаже недвижимости</li> </ul> </div> </div> </div> </section> <section class="block block--ink" id="schedule"> <div class="wrap"> <div class="section-head"> <span class="eyebrow">10:00 — 18:30 · семь выступлений</span> <h2>Программа форума</h2> <p class="block-lead">8 часов практики без воды — от трафика и переговоров до нейромаркетинга и разбора вашей воронки.</p> </div> <div class="tower" id="tower"> <div class="rail" aria-hidden="true"><span class="rail-fill" id="railFill"></span></div> <article class="spk reveal"> <div class="spk-mark"> <div class="spk-num">01</div> <span class="spk-time">10:00–11:00</span> </div> <div class="spk-photo-wrap"> <img class="spk-photo" src="https://www.donexpocentre.ru/media/filer_public/GG/01-irina-gelevey.jpg" alt="Ирина Гелевей" loading="lazy"> </div> <div class="spk-body"> <h3 class="spk-topic">Тренды продвижения жилой недвижимости: где искать клиентов в 2026–2027 г.</h3> <div class="spk-name">Ирина Гелевей</div> <p class="spk-bio">Маркетолог 18+ лет, международный бизнес-тренер ICBT, председатель Комитета по личному бренду и нейросетям Ростовского отделения «ОПОРА РОССИИ», руководитель агентства ТРАФИКУС <span class="spk-city">· Ростов-на-Дону</span></p> </div> </article> <div class="break">11:00–11:10 · перерыв</div> <article class="spk reveal"> <div class="spk-mark"> <div class="spk-num">02</div> <span class="spk-time">11:10–12:10</span> </div> <div class="spk-photo-wrap"> <img class="spk-photo" src="https://www.donexpocentre.ru/media/filer_public/GG/Ulitskaya.jpg" alt="Улицкая Светлана" loading="lazy"> </div> <div class="spk-body"> <h3 class="spk-topic">СПИН в недвижимости: как задавать вопросы, после которых клиент хочет работать только с вами</h3> <div class="spk-name">Улицкая Светлана</div> <p class="spk-bio">Владелец агентства недвижимости СТАРГРАД, владелец международной онлайн-школы, 50 000+ учеников по всему миру, автор книг о недвижимости, лауреат Национальной премии за вклад в развитие книжного рынка, инвестор</p> </div> </article> <article class="spk reveal"> <div class="spk-mark"> <div class="spk-num">03</div> <span class="spk-time">12:10–13:10</span> </div> <div class="spk-photo-wrap"> <img class="spk-photo" src="https://www.donexpocentre.ru/media/filer_public/GG/arharova.jpg" alt="Екатерина Архарова" loading="lazy"> </div> <div class="spk-body"> <h3 class="spk-topic">Путь клиента: где теряются деньги</h3> <div class="spk-name">Екатерина Архарова</div> <p class="spk-bio">Автор книги «Продажи недвижимости в переписке» и системы «Ледокол» — по ней продавали 1000+ специалистов на сумму свыше 100 млрд ₽ <span class="spk-city">· Краснодар</span></p> </div> </article> <div class="break">13:10–13:40 · перерыв</div> <article class="spk reveal"> <div class="spk-mark"> <div class="spk-num">04</div> <span class="spk-time">13:40–14:10</span> </div> <div class="spk-photo-wrap"> <img class="spk-photo" src="https://www.donexpocentre.ru/media/filer_public/GG/shabarov.jpg" alt="Юрий Шабаров" loading="lazy"> </div> <div class="spk-body"> <h3 class="spk-topic">Искусство ведения переговоров</h3> <div class="spk-name">Юрий Шабаров</div> <p class="spk-bio">Бизнес-тренер по продажам и переговорам, автор книги «Возражений. НЕТ» <span class="spk-city">· Краснодар</span></p> </div> </article> <article class="spk reveal"> <div class="spk-mark"> <div class="spk-num">05</div> <span class="spk-time">14:10–15:10</span> </div> <div class="spk-photo-wrap"> <img class="spk-photo" src="https://www.donexpocentre.ru/media/filer_public/GG/05-vitaliya-klimenko.jpg" alt="Виталия Клименко" loading="lazy"> </div> <div class="spk-body"> <h3 class="spk-topic">Нейромаркетинг: как влиять на подсознание покупателя недвижимости</h3> <div class="spk-name">Виталия Клименко</div> <p class="spk-bio">Предприниматель, эксперт по продажам и коммуникациям с клиентом, бизнес-тренер 16 лет, автор программ для B2B и B2C <span class="spk-city">· Ростов-на-Дону</span></p> </div> </article> <div class="break">15:10–15:20 · перерыв</div> <article class="spk reveal"> <div class="spk-mark"> <div class="spk-num">06</div> <span class="spk-time">15:20–16:20</span> </div> <div class="spk-photo-wrap"> <img class="spk-photo" src="https://www.donexpocentre.ru/media/filer_public/GG/06-elena-delibaltidis.jpg" alt="Елена Делибалтидис" loading="lazy"> </div> <div class="spk-body"> <h3 class="spk-topic">Портрет успешного продавца недвижимости</h3> <div class="spk-name">Елена Делибалтидис</div> <p class="spk-bio">Эксперт по личному бренду, председатель молодёжного комитета «ОПОРА РОССИИ», член экспертного жюри ведущих вузов Ростова <span class="spk-city">· Ростов-на-Дону</span></p> </div> </article> <article class="spk reveal"> <div class="spk-mark"> <div class="spk-num">07</div> <span class="spk-time">16:20–18:00</span> </div> <div class="spk-photo-wrap"> <img class="spk-photo" src="https://www.donexpocentre.ru/media/filer_public/GG/07-yana-guseva.jpg" alt="Яна Гусева" loading="lazy"> </div> <div class="spk-body"> <h3 class="spk-topic">ДНК сделки команды: карта управляемой конверсии в недвижимости</h3> <div class="spk-name">Яна Гусева</div> <p class="spk-bio">Постоянный спикер значимых мероприятий в сфере недвижимости, бизнес-консультант крупнейших агентств России, сертифицированный коуч — 150+ компаний за 5 лет работы тренером <span class="spk-city">· Москва</span></p> </div> </article> <div class="break break--final">18:00–18:30 · вручение сертификатов</div> </div> </div> </section> <div class="stats-band"> <div class="stats-row"> <div class="stats-item"><div class="stats-num">01</div><div class="stats-lbl">день форума</div></div> <div class="stats-item"><div class="stats-num">07</div><div class="stats-lbl">экспертов рынка</div></div> <div class="stats-item"><div class="stats-num">60</div><div class="stats-lbl">мест очно</div></div> <div class="stats-item"><div class="stats-num">08</div><div class="stats-lbl">часов программы</div></div> </div> </div> <section class="block block--paper" id="pricing"> <div class="wrap"> <div class="section-head"> <span class="eyebrow">Цена растёт по календарю</span> <h2>Стоимость участия</h2> <p class="block-lead">Чем раньше бронь — тем дешевле место. Дата в билете одна, цена — разная.</p> </div> <div class="price-grid"> <button type="button" class="price-card active reveal" aria-expanded="false" onclick="this.classList.toggle('show-until'); this.setAttribute('aria-expanded', this.classList.contains('show-until') ? 'true' : 'false')"> <span class="price-tag">Текущая цена</span> <span class="price-until">Цена до 15 сентября</span> <span class="price-reveal"><span class="price-amount">5000 ₽</span><span class="price-film">Открыть цену</span></span> <span class="price-hint">нажмите, чтобы открыть</span> </button> <button type="button" class="price-card reveal" aria-expanded="false" onclick="this.classList.toggle('show-until'); this.setAttribute('aria-expanded', this.classList.contains('show-until') ? 'true' : 'false')"> <span class="price-until">Цена до 15 октября</span> <span class="price-reveal"><span class="price-amount">6000 ₽</span><span class="price-film">Открыть цену</span></span> <span class="price-hint">нажмите, чтобы открыть</span> </button> <button type="button" class="price-card reveal" aria-expanded="false" onclick="this.classList.toggle('show-until'); this.setAttribute('aria-expanded', this.classList.contains('show-until') ? 'true' : 'false')"> <span class="price-until">Цена до 13 ноября</span> <span class="price-reveal"><span class="price-amount">8000 ₽</span><span class="price-film">Открыть цену</span></span> <span class="price-hint">нажмите, чтобы открыть</span> </button> </div> </div> </section> <section class="block block--paper" id="tickets" style="padding-top:0;"> <div class="wrap"> <div class="tickets-card"> <span class="eyebrow">Осталось 60 мест</span> <h2>Забронировать место</h2> <p class="block-lead">Заполните форму — мы закрепим за вами место по действующей на сегодня цене.</p> <div class="widget-shell"> <script type="text/javascript" data-cfasync="false" async="async" defer="defer" charset="UTF-8" src="https://timepad.ru/js/tpwf/loader/min/loader.js" data-timepad-customized="361645" data-twf2s-event--id="4098471" data-timepad-widget-v2="event_register"></script> </div> </div> </div> </section> <div class="countdown-band"> <div class="wrap countdown-inner"> <div class="countdown-label">До начала форума осталось</div> <div class="countdown-grid"> <div class="cd-item"><div class="cd-num" id="cdDays">00</div><div class="cd-lbl">дней</div></div> <div class="cd-item"><div class="cd-num" id="cdHours">00</div><div class="cd-lbl">часов</div></div> <div class="cd-item"><div class="cd-num" id="cdMinutes">00</div><div class="cd-lbl">минут</div></div> <div class="cd-item"><div class="cd-num" id="cdSeconds">00</div><div class="cd-lbl">секунд</div></div> </div> <a href="#tickets" class="countdown-cta" onclick="if(window.ym){ym(111119624,'reachGoal','book_click_countdown')}">Успеть забронировать место →</a> </div> </div> <div class="marquee"> <div class="marquee-track"> <span>Билеты в продаже</span> <span>13 ноября 2026, 11:00</span> <span>ДонЭкспоцентр, зал «Бета»</span> <span>Осталось 60 мест</span> <span>Билеты в продаже</span> <span>13 ноября 2026, 11:00</span> <span>ДонЭкспоцентр, зал «Бета»</span> <span>Осталось 60 мест</span> </div> </div> <script>
+</style> <script>document.documentElement.classList.add('js');</script> <header class="hero" id="top"> <div class="hero-inner"> <div class="hero-copy"> <span class="eyebrow">ДонЭкспоцентр · зал «Бета» · 11:00</span> <h1> <span class="h1-line"><span>Форум</span></span> <span class="h1-line"><span>продаж</span></span> <span class="h1-line"><span class="h1-outline">Недвижимости</span></span> </h1> <p class="hero-sub"><b>1</b> день, <b>1</b> площадка, <b>7</b> экспертов и <b>7</b> этапов сделки — от лида до подписи</p> <div class="hero-actions"> <a href="#tickets" class="btn-primary" onclick="if(window.ym){ym(111119624,'reachGoal','book_click_hero')}"> Забронировать место <span class="btn-sub">осталось 60 мест</span> </a> <div class="hero-note">13 ноября 2026<br>Ростов-на-Дону</div> </div> </div> <div class="facade" id="facade"> <div class="facade-roof"></div> <div class="facade-grid"> <div class="win win-plate"> <span class="p-big">13</span> <span class="p-small">ноября<br>2026</span> </div> <a class="win" href="#schedule"> <img width="1254" height="1254" src="images/spk/Gelevey-360.jpg" srcset="images/spk/Gelevey-360.jpg 360w, images/spk/Gelevey-720.jpg 720w" sizes="(max-width:1000px) 32vw, 150px" alt="Ирина Гелевей" decoding="async"> <span class="win-name">Ирина Гелевей</span> </a> <a class="win" href="#schedule"> <img width="1254" height="1254" src="images/spk/Ulickaya-360.jpg" srcset="images/spk/Ulickaya-360.jpg 360w, images/spk/Ulickaya-720.jpg 720w" sizes="(max-width:1000px) 32vw, 150px" alt="Улицкая Светлана" decoding="async"> <span class="win-name">Улицкая Светлана</span> </a> <a class="win" href="#schedule"> <img width="1254" height="1254" src="images/spk/Arharova-360.jpg" srcset="images/spk/Arharova-360.jpg 360w, images/spk/Arharova-720.jpg 720w" sizes="(max-width:1000px) 32vw, 150px" alt="Екатерина Архарова" decoding="async"> <span class="win-name">Екатерина Архарова</span> </a> <a class="win" href="#schedule"> <img width="1254" height="1254" src="images/spk/Shabarov-360.jpg" srcset="images/spk/Shabarov-360.jpg 360w, images/spk/Shabarov-720.jpg 720w" sizes="(max-width:1000px) 32vw, 150px" alt="Юрий Шабаров" decoding="async"> <span class="win-name">Юрий Шабаров</span> </a> <a class="win" href="#schedule"> <img width="1254" height="1254" src="images/spk/Klimenko-360.jpg" srcset="images/spk/Klimenko-360.jpg 360w, images/spk/Klimenko-720.jpg 720w" sizes="(max-width:1000px) 32vw, 150px" alt="Виталия Клименко" decoding="async"> <span class="win-name">Виталия Клименко</span> </a> <a class="win" href="#schedule"> <img width="1254" height="1254" src="images/spk/Delibaltidis-360.jpg" srcset="images/spk/Delibaltidis-360.jpg 360w, images/spk/Delibaltidis-720.jpg 720w" sizes="(max-width:1000px) 32vw, 150px" alt="Елена Делибалтидис" decoding="async"> <span class="win-name">Елена Делибалтидис</span> </a> <a class="win" href="#schedule"> <img width="1254" height="1254" src="images/spk/Guseva-360.jpg" srcset="images/spk/Guseva-360.jpg 360w, images/spk/Guseva-720.jpg 720w" sizes="(max-width:1000px) 32vw, 150px" alt="Яна Гусева" decoding="async"> <span class="win-name">Яна Гусева</span> </a> <div class="win win-plate win-plate--quiet"> <span class="p-big">10:00</span> <span class="p-small">до 18:30</span> </div> </div> <div class="facade-base"></div> <div class="facade-cap"> <span>Спикеры форума</span> <span>Ростов-на-Дону</span> </div> </div> </div> </header> <div class="seam seam--paper"> <div class="wrap seam-inner"> <span class="seam-name">О форуме</span> <span class="seam-rule"><i></i></span> <span class="seam-fact">13 ноября 2026</span> </div> </div> <section class="block block--paper" id="about"> <div class="wrap"> <div class="section-head"> <span class="eyebrow">Форум для отделов продаж</span> <h2>О форуме</h2> </div> <div class="about-grid"> <div class="about-card reveal"> <span class="eyebrow">Программа</span> <h3>Что вас ждёт</h3> <ul> <li>Встреча с 7 экспертами в рамках одного дня — тренды, инструменты и практика продаж недвижимости</li> <li>Возможность задать вопрос напрямую эксперту в конкретной отрасли</li> <li>Именной сертификат, подтверждающий участие в форуме</li> </ul> </div> <div class="about-card reveal"> <span class="eyebrow">Аудитория</span> <h3>Кому будет полезно</h3> <ul> <li>Менеджерам отделов продаж застройщиков</li> <li>Руководителям отделов продаж</li> <li>Агентам по продаже недвижимости</li> </ul> </div> </div> </div> </section> <div class="seam seam--ink"> <div class="wrap seam-inner"> <span class="seam-name">Программа</span> <span class="seam-rule"><i></i></span> <span class="seam-fact">10:00 — 18:30</span> </div> </div> <section class="block block--ink" id="schedule"> <div class="wrap"> <div class="section-head"> <span class="eyebrow">Семь спикеров, один зал</span> <h2>Программа форума</h2> <p class="block-lead">8 часов практики без воды — от трафика и переговоров до нейромаркетинга и разбора вашей воронки.</p> </div> <div class="tower" id="tower"> <div class="rail" aria-hidden="true"><span class="rail-fill" id="railFill"></span></div> <article class="spk reveal"> <div class="spk-mark"> <div class="spk-num">01</div> <span class="spk-time">10:00–11:00</span> </div> <div class="spk-photo-wrap"> <img class="spk-photo" width="1254" height="1254" src="images/spk/Gelevey-720.jpg" srcset="images/spk/Gelevey-360.jpg 360w, images/spk/Gelevey-720.jpg 720w" sizes="(max-width:860px) calc(100vw - 46px), 332px" alt="Ирина Гелевей" loading="lazy" decoding="async"> </div> <div class="spk-body"> <h3 class="spk-topic">Тренды продвижения жилой недвижимости: где искать клиентов в 2026–2027 г.</h3> <div class="spk-name">Ирина Гелевей</div> <p class="spk-bio">Маркетолог 18+ лет, международный бизнес-тренер ICBT, председатель Комитета по личному бренду и нейросетям Ростовского отделения «ОПОРА РОССИИ», руководитель агентства ТРАФИКУС <span class="spk-city">· Ростов-на-Дону</span></p> </div> </article> <div class="break">11:00–11:10 · перерыв</div> <article class="spk reveal"> <div class="spk-mark"> <div class="spk-num">02</div> <span class="spk-time">11:10–12:10</span> </div> <div class="spk-photo-wrap"> <img class="spk-photo" width="1254" height="1254" src="images/spk/Ulickaya-720.jpg" srcset="images/spk/Ulickaya-360.jpg 360w, images/spk/Ulickaya-720.jpg 720w" sizes="(max-width:860px) calc(100vw - 46px), 332px" alt="Улицкая Светлана" loading="lazy" decoding="async"> </div> <div class="spk-body"> <h3 class="spk-topic">СПИН в недвижимости: как задавать вопросы, после которых клиент хочет работать только с вами</h3> <div class="spk-name">Улицкая Светлана</div> <p class="spk-bio">Владелец агентства недвижимости СТАРГРАД, владелец международной онлайн-школы, 50 000+ учеников по всему миру, автор книг о недвижимости, лауреат Национальной премии за вклад в развитие книжного рынка, инвестор</p> </div> </article> <article class="spk reveal"> <div class="spk-mark"> <div class="spk-num">03</div> <span class="spk-time">12:10–13:10</span> </div> <div class="spk-photo-wrap"> <img class="spk-photo" width="1254" height="1254" src="images/spk/Arharova-720.jpg" srcset="images/spk/Arharova-360.jpg 360w, images/spk/Arharova-720.jpg 720w" sizes="(max-width:860px) calc(100vw - 46px), 332px" alt="Екатерина Архарова" loading="lazy" decoding="async"> </div> <div class="spk-body"> <h3 class="spk-topic">Путь клиента: где теряются деньги</h3> <div class="spk-name">Екатерина Архарова</div> <p class="spk-bio">Автор книги «Продажи недвижимости в переписке» и системы «Ледокол» — по ней продавали 1000+ специалистов на сумму свыше 100 млрд ₽ <span class="spk-city">· Краснодар</span></p> </div> </article> <div class="break">13:10–13:40 · перерыв</div> <article class="spk reveal"> <div class="spk-mark"> <div class="spk-num">04</div> <span class="spk-time">13:40–14:10</span> </div> <div class="spk-photo-wrap"> <img class="spk-photo" width="1254" height="1254" src="images/spk/Shabarov-720.jpg" srcset="images/spk/Shabarov-360.jpg 360w, images/spk/Shabarov-720.jpg 720w" sizes="(max-width:860px) calc(100vw - 46px), 332px" alt="Юрий Шабаров" loading="lazy" decoding="async"> </div> <div class="spk-body"> <h3 class="spk-topic">Искусство ведения переговоров</h3> <div class="spk-name">Юрий Шабаров</div> <p class="spk-bio">Бизнес-тренер по продажам и переговорам, автор книги «Возражений. НЕТ» <span class="spk-city">· Краснодар</span></p> </div> </article> <article class="spk reveal"> <div class="spk-mark"> <div class="spk-num">05</div> <span class="spk-time">14:10–15:10</span> </div> <div class="spk-photo-wrap"> <img class="spk-photo" width="1254" height="1254" src="images/spk/Klimenko-720.jpg" srcset="images/spk/Klimenko-360.jpg 360w, images/spk/Klimenko-720.jpg 720w" sizes="(max-width:860px) calc(100vw - 46px), 332px" alt="Виталия Клименко" loading="lazy" decoding="async"> </div> <div class="spk-body"> <h3 class="spk-topic">Нейромаркетинг: как влиять на подсознание покупателя недвижимости</h3> <div class="spk-name">Виталия Клименко</div> <p class="spk-bio">Предприниматель, эксперт по продажам и коммуникациям с клиентом, бизнес-тренер 16 лет, автор программ для B2B и B2C <span class="spk-city">· Ростов-на-Дону</span></p> </div> </article> <div class="break">15:10–15:20 · перерыв</div> <article class="spk reveal"> <div class="spk-mark"> <div class="spk-num">06</div> <span class="spk-time">15:20–16:20</span> </div> <div class="spk-photo-wrap"> <img class="spk-photo" width="1254" height="1254" src="images/spk/Delibaltidis-720.jpg" srcset="images/spk/Delibaltidis-360.jpg 360w, images/spk/Delibaltidis-720.jpg 720w" sizes="(max-width:860px) calc(100vw - 46px), 332px" alt="Елена Делибалтидис" loading="lazy" decoding="async"> </div> <div class="spk-body"> <h3 class="spk-topic">Портрет успешного продавца недвижимости</h3> <div class="spk-name">Елена Делибалтидис</div> <p class="spk-bio">Эксперт по личному бренду, председатель молодёжного комитета «ОПОРА РОССИИ», член экспертного жюри ведущих вузов Ростова <span class="spk-city">· Ростов-на-Дону</span></p> </div> </article> <article class="spk reveal"> <div class="spk-mark"> <div class="spk-num">07</div> <span class="spk-time">16:20–18:00</span> </div> <div class="spk-photo-wrap"> <img class="spk-photo" width="1254" height="1254" src="images/spk/Guseva-720.jpg" srcset="images/spk/Guseva-360.jpg 360w, images/spk/Guseva-720.jpg 720w" sizes="(max-width:860px) calc(100vw - 46px), 332px" alt="Яна Гусева" loading="lazy" decoding="async"> </div> <div class="spk-body"> <h3 class="spk-topic">ДНК сделки команды: карта управляемой конверсии в недвижимости</h3> <div class="spk-name">Яна Гусева</div> <p class="spk-bio">Постоянный спикер значимых мероприятий в сфере недвижимости, бизнес-консультант крупнейших агентств России, сертифицированный коуч — 150+ компаний за 5 лет работы тренером <span class="spk-city">· Москва</span></p> </div> </article> <div class="break break--final">18:00–18:30 · вручение сертификатов</div> </div> </div> </section> <div class="stats-band"> <div class="stats-row"> <div class="stats-item"><div class="stats-num">01</div><div class="stats-lbl">день форума</div></div> <div class="stats-item"><div class="stats-num">07</div><div class="stats-lbl">экспертов рынка</div></div> <div class="stats-item"><div class="stats-num">60</div><div class="stats-lbl">мест очно</div></div> <div class="stats-item"><div class="stats-num">08</div><div class="stats-lbl">часов программы</div></div> </div> </div> <div class="seam seam--paper"> <div class="wrap seam-inner"> <span class="seam-name">Стоимость</span> <span class="seam-rule"><i></i></span> <span class="seam-fact">от 5000 ₽</span> </div> </div> <section class="block block--paper" id="pricing"> <div class="wrap"> <div class="section-head"> <span class="eyebrow">Цена растёт по календарю</span> <h2>Стоимость участия</h2> <p class="block-lead">Чем раньше бронь — тем дешевле место. Дата в билете одна, цена — разная.</p> </div> <div class="price-grid"> <button type="button" class="price-card active reveal" aria-expanded="false" onclick="this.classList.toggle('show-until'); this.setAttribute('aria-expanded', this.classList.contains('show-until') ? 'true' : 'false')"> <span class="price-tag">Текущая цена</span> <span class="price-until">Цена до 15 сентября</span> <span class="price-reveal"><span class="price-amount">5000 ₽</span><span class="price-film">Открыть цену</span></span> <span class="price-hint">нажмите, чтобы открыть</span> </button> <button type="button" class="price-card reveal" aria-expanded="false" onclick="this.classList.toggle('show-until'); this.setAttribute('aria-expanded', this.classList.contains('show-until') ? 'true' : 'false')"> <span class="price-until">Цена до 15 октября</span> <span class="price-reveal"><span class="price-amount">6000 ₽</span><span class="price-film">Открыть цену</span></span> <span class="price-hint">нажмите, чтобы открыть</span> </button> <button type="button" class="price-card reveal" aria-expanded="false" onclick="this.classList.toggle('show-until'); this.setAttribute('aria-expanded', this.classList.contains('show-until') ? 'true' : 'false')"> <span class="price-until">Цена до 13 ноября</span> <span class="price-reveal"><span class="price-amount">8000 ₽</span><span class="price-film">Открыть цену</span></span> <span class="price-hint">нажмите, чтобы открыть</span> </button> </div> </div> </section> <section class="block block--paper" id="tickets" style="padding-top:0;"> <div class="wrap"> <div class="tickets-card"> <span class="eyebrow">Осталось 60 мест</span> <h2>Забронировать место</h2> <p class="block-lead">Заполните форму — мы закрепим за вами место по действующей на сегодня цене.</p> <div class="widget-shell"> <script type="text/javascript" data-cfasync="false" async="async" defer="defer" charset="UTF-8" src="https://timepad.ru/js/tpwf/loader/min/loader.js" data-timepad-customized="361645" data-twf2s-event--id="4098471" data-timepad-widget-v2="event_register"></script> </div> </div> </div> </section> <div class="seam seam--ink"> <div class="wrap seam-inner"> <span class="seam-name">Обратный отсчёт</span> <span class="seam-rule"><i></i></span> <span class="seam-fact">13.11.2026 · 11:00</span> </div> </div> <div class="countdown-band"> <div class="wrap countdown-inner"> <div class="countdown-label">До начала форума осталось</div> <div class="countdown-grid"> <div class="cd-item"><div class="cd-num" id="cdDays">00</div><div class="cd-lbl">дней</div></div> <div class="cd-item"><div class="cd-num" id="cdHours">00</div><div class="cd-lbl">часов</div></div> <div class="cd-item"><div class="cd-num" id="cdMinutes">00</div><div class="cd-lbl">минут</div></div> <div class="cd-item"><div class="cd-num" id="cdSeconds">00</div><div class="cd-lbl">секунд</div></div> </div> <a href="#tickets" class="countdown-cta" onclick="if(window.ym){ym(111119624,'reachGoal','book_click_countdown')}">Успеть забронировать место →</a> </div> </div> <div class="marquee"> <div class="marquee-track"> <span>Билеты в продаже</span> <span>13 ноября 2026, 11:00</span> <span>ДонЭкспоцентр, зал «Бета»</span> <span>Осталось 60 мест</span> <span>Билеты в продаже</span> <span>13 ноября 2026, 11:00</span> <span>ДонЭкспоцентр, зал «Бета»</span> <span>Осталось 60 мест</span> </div> </div> <script>
   (function() {
     var reduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -650,27 +711,118 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
       revealEls.forEach(function(el) { el.classList.add('in-view'); });
     }
 
-    /* the elevation rail fills as you climb the programme */
+    /* ---- one scroll pass drives every layer on the page ---- */
+    var vh = window.innerHeight;
+    var hero = document.querySelector('.hero');
+    var heroCopy = document.querySelector('.hero-copy');
+    var facade = document.getElementById('facade');
     var railFill = document.getElementById('railFill');
     var tower = document.getElementById('tower');
-    if (railFill && tower && !reduced) {
-      var ticking = false;
-      var drawRail = function() {
+    var seams = Array.prototype.slice.call(document.querySelectorAll('.seam'));
+    var photos = Array.prototype.slice.call(document.querySelectorAll('.spk-photo-wrap'));
+
+    function clamp(v) { return v < 0 ? 0 : (v > 1 ? 1 : v); }
+
+    function paint() {
+      var y = window.pageYOffset;
+
+      /* the hero drifts apart as it leaves: copy slow, facade faster */
+      if (hero && heroCopy && facade) {
+        var h = hero.offsetHeight || 1;
+        var out = clamp(y / h);
+        heroCopy.style.transform = 'translate3d(0,' + (out * 74).toFixed(1) + 'px,0)';
+        heroCopy.style.opacity = (1 - out * 1.15).toFixed(3);
+        facade.style.transform = 'translate3d(0,' + (out * -46).toFixed(1) + 'px,0)';
+      }
+
+      /* the elevation rail fills as you climb the programme */
+      if (railFill && tower) {
         var r = tower.getBoundingClientRect();
-        var p = (window.innerHeight * 0.55 - r.top) / r.height;
-        if (p < 0) p = 0;
-        if (p > 1) p = 1;
-        railFill.style.transform = 'scaleY(' + p.toFixed(4) + ')';
-        ticking = false;
+        railFill.style.transform = 'scaleY(' + clamp((vh * 0.55 - r.top) / r.height).toFixed(4) + ')';
+      }
+
+      /* each floor slab measures itself as you pass through it */
+      for (var i = 0; i < seams.length; i++) {
+        var sr = seams[i].getBoundingClientRect();
+        var p = clamp((vh - sr.top) / (vh * 0.62));
+        var line = seams[i].querySelector('.seam-rule i');
+        if (line) line.style.transform = 'scaleX(' + p.toFixed(4) + ')';
+        seams[i].classList.toggle('in-view', p > 0.18);
+      }
+
+      /* each portrait is a window: it lights as it crosses the middle of the screen */
+      for (var j = 0; j < photos.length; j++) {
+        var pr = photos[j].getBoundingClientRect();
+        if (pr.bottom < -120 || pr.top > vh + 120) continue;
+        var off = Math.abs(pr.top + pr.height / 2 - vh / 2) / (vh * 0.62);
+        photos[j].style.setProperty('--glow', clamp(1 - off).toFixed(3));
+      }
+    }
+
+    var painting = false;
+    function onScroll() {
+      if (painting) return;
+      painting = true;
+      window.requestAnimationFrame(function() { paint(); painting = false; });
+    }
+    if (!reduced) {
+      paint();
+      window.addEventListener('scroll', onScroll, { passive: true });
+      window.addEventListener('resize', function() { vh = window.innerHeight; onScroll(); });
+    } else {
+      seams.forEach(function(el) { el.classList.add('in-view'); });
+    }
+
+    /* the stats count up to their real figures on arrival */
+    var statNums = document.querySelectorAll('.stats-num');
+    if ('IntersectionObserver' in window && !reduced) {
+      var statsIo = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (!entry.isIntersecting) return;
+          var el = entry.target;
+          var target = parseInt(el.textContent, 10);
+          var t0 = null;
+          var step = function(ts) {
+            if (!t0) t0 = ts;
+            var k = clamp((ts - t0) / 900);
+            var v = Math.round(target * (1 - Math.pow(1 - k, 3)));
+            el.textContent = v < 10 ? '0' + v : '' + v;
+            if (k < 1) window.requestAnimationFrame(step);
+          };
+          el.textContent = '00';
+          window.requestAnimationFrame(step);
+          statsIo.unobserve(el);
+        });
+      }, { threshold: 0.6 });
+      statNums.forEach(function(el) { statsIo.observe(el); });
+    }
+
+    /* the topbar names the floor you are standing on */
+    var meta = document.getElementById('topbarMeta');
+    if (meta && 'IntersectionObserver' in window) {
+      var home = meta.textContent;
+      var current = null;
+      var titles = {
+        about: 'О форуме', schedule: 'Программа форума', pricing: 'Стоимость участия',
+        tickets: 'Забронировать место', contacts: 'Контакты'
       };
-      var onScrollRail = function() {
-        if (ticking) return;
-        ticking = true;
-        window.requestAnimationFrame(drawRail);
+      var setMeta = function(txt) {
+        if (txt === current) return;
+        current = txt;
+        meta.classList.add('swap');
+        setTimeout(function() { meta.textContent = txt; meta.classList.remove('swap'); }, 160);
       };
-      drawRail();
-      window.addEventListener('scroll', onScrollRail, { passive: true });
-      window.addEventListener('resize', onScrollRail);
+      var floorIo = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          var id = entry.target.id;
+          if (entry.isIntersecting) setMeta(titles[id] || home);
+          else if (id === 'about' && entry.boundingClientRect.top > 0) setMeta(home);
+        });
+      }, { rootMargin: '-45% 0px -45% 0px' });
+      Object.keys(titles).forEach(function(id) {
+        var el = document.getElementById(id);
+        if (el) floorIo.observe(el);
+      });
     }
 
     /* countdown to the doors opening */
@@ -695,14 +847,14 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
 <!-- nominify end --> </div> </div> <!--footer--> <footer id="t-footer" class="t-records" data-hook="blocks-collection-content-node" data-tilda-project-id="27715696" data-tilda-page-id="159480609" data-tilda-formskey="7b682d191f929a43838d12f727715696" data-tilda-cookie="no" data-tilda-lazy="yes" data-tilda-root-zone="com" data-tilda-project-country="RU"> <div id="rec2556731901" class="r t-rec" style=" " data-record-type="1370"> <!-- T1370 --> <div class="t1370"> <!-- nominify begin -->
 <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Onest:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"> <style>
   :root {
-    --ink:#131019;
-    --ink-2:#1B1724;
-    --ink-3:#2A2436;
-    --ink-4:#3B3450;
-    --paper:#E5E2D9;
-    --lit:#FFC24B;
-    --lit-soft:#FFD98A;
-    --draft:#8C93A8;
+    --ink:#0F1B4D;
+    --ink-2:#16265F;
+    --ink-3:#24358A;
+    --ink-4:#3B4FA8;
+    --paper:#F7F7FA;
+    --lit:#E8622C;
+    --lit-soft:#FF8A50;
+    --draft:#8E9AD1;
     --f-display:'Unbounded','Onest',Arial,sans-serif;
     --f-body:'Onest',Arial,sans-serif;
     --f-mono:'IBM Plex Mono','Courier New',monospace;
@@ -768,7 +920,7 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
     font-size:19px; line-height:1; cursor:pointer;
     opacity:0; visibility:hidden; transform:translateY(10px);
     transition:opacity 0.25s ease, visibility 0.25s ease, transform 0.25s ease, background 0.2s ease;
-    box-shadow:0 12px 32px rgba(19,16,25,0.35);
+    box-shadow:0 12px 32px rgba(10,20,62,0.35);
   }
   .to-top.show { opacity:1; visibility:visible; transform:none; }
   .to-top:hover { background:var(--lit-soft); }
