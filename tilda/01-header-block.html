@@ -1,0 +1,186 @@
+<link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Onest:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet"> <style>
+  :root {
+    --ink:#0F1B4D;
+    --ink-2:#16265F;
+    --ink-3:#24358A;
+    --ink-4:#3B4FA8;
+    --paper:#F7F7FA;
+    --paper-2:#E7E8F0;
+    --lit:#E8622C;
+    --lit-soft:#FF8A50;
+    --lit-deep:#C4471A;
+    --draft:#8E9AD1;
+    --f-display:'Unbounded','Onest',Arial,sans-serif;
+    --f-body:'Onest',Arial,sans-serif;
+    --f-mono:'IBM Plex Mono','Courier New',monospace;
+  }
+
+  #loader, #loader *,
+  .topbar, .topbar *,
+  .nav-panel, .nav-panel * {
+    box-sizing:border-box; margin:0; padding:0;
+  }
+  .topbar a, .nav-panel a { color:inherit; text-decoration:none; }
+  .topbar button, .nav-panel button { font-family:inherit; cursor:pointer; }
+
+  /* ===== LOADER: windows switching on ===== */
+  #loader {
+    position:fixed; inset:0; z-index:9999; background:var(--ink);
+    display:flex; align-items:center; justify-content:center; flex-direction:column; gap:26px;
+    transition:opacity 0.55s ease, visibility 0.55s ease;
+  }
+  #loader.hide { opacity:0; visibility:hidden; pointer-events:none; }
+  #loader .loader-facade {
+    display:grid; grid-template-columns:repeat(3,20px); grid-auto-rows:26px; gap:3px;
+    background:var(--ink-3); padding:3px; border:1px solid var(--ink-3);
+  }
+  .loader-facade i {
+    display:block; background:var(--ink-2);
+    animation:winOn 1.6s ease-in-out infinite;
+  }
+  .loader-facade i:nth-child(1) { animation-delay:0.10s }
+  .loader-facade i:nth-child(2) { animation-delay:0.55s }
+  .loader-facade i:nth-child(3) { animation-delay:0.25s }
+  .loader-facade i:nth-child(4) { animation-delay:0.80s }
+  .loader-facade i:nth-child(5) { animation-delay:0.00s }
+  .loader-facade i:nth-child(6) { animation-delay:0.65s }
+  .loader-facade i:nth-child(7) { animation-delay:0.40s }
+  .loader-facade i:nth-child(8) { animation-delay:0.95s }
+  .loader-facade i:nth-child(9) { animation-delay:0.30s }
+  @keyframes winOn {
+    0%, 100% { background:var(--ink-2); box-shadow:none; }
+    35%, 60% { background:var(--lit); box-shadow:0 0 14px rgba(232,98,44,0.55); }
+  }
+  .loader-text {
+    color:var(--draft); font-family:var(--f-mono); letter-spacing:0.22em;
+    font-size:11px; text-transform:uppercase;
+  }
+
+  /* ===== TOPBAR ===== */
+  .topbar {
+    position:sticky; top:0; z-index:500;
+    background:rgba(10,20,62,0.82);
+    -webkit-backdrop-filter:blur(14px) saturate(140%); backdrop-filter:blur(14px) saturate(140%);
+    border-bottom:1px solid rgba(255,255,255,0.07);
+    transition:background 0.25s ease, border-color 0.25s ease;
+  }
+  .topbar.scrolled { background:rgba(10,20,62,0.96); border-bottom-color:rgba(232,98,44,0.28); }
+  .topbar-inner {
+    max-width:1180px; margin:0 auto; padding:11px 26px;
+    display:flex; align-items:center; justify-content:space-between; gap:18px;
+  }
+  .topbar-brand { display:flex; align-items:center; gap:13px; min-width:0; }
+  .topbar-logo { height:34px; width:auto; flex-shrink:0; display:block; }
+  .topbar-name {
+    color:#fff; font-family:var(--f-display); font-size:11px; font-weight:600;
+    letter-spacing:0.07em; line-height:1.5; text-transform:uppercase; white-space:nowrap;
+  }
+  .topbar-name b { display:block; font-weight:600; color:var(--lit); }
+  .topbar-right { display:flex; align-items:center; gap:16px; }
+  .topbar-meta {
+    font-family:var(--f-mono); font-size:11px; letter-spacing:0.08em;
+    color:var(--draft); text-transform:uppercase; white-space:nowrap;
+    transition:opacity 0.16s ease, transform 0.16s ease;
+  }
+  .topbar-meta.swap { opacity:0; transform:translateY(-4px); }
+  .topbar-cta {
+    position:relative; background:var(--lit); color:var(--ink);
+    font-family:var(--f-mono); font-weight:500; text-transform:uppercase;
+    font-size:11px; letter-spacing:0.1em; padding:11px 20px;
+    white-space:nowrap; transition:background 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
+    box-shadow:0 0 0 rgba(232,98,44,0);
+  }
+  .topbar-cta:hover { background:var(--lit-soft); box-shadow:0 6px 26px rgba(232,98,44,0.35); }
+  .burger {
+    width:38px; height:38px; border:1px solid rgba(255,255,255,0.16);
+    background:transparent; display:flex; align-items:center; justify-content:center;
+    flex-direction:column; gap:4px; flex-shrink:0; transition:border-color 0.2s ease;
+  }
+  .burger:hover { border-color:var(--lit); }
+  .burger span { width:16px; height:1.5px; background:#fff; transition:transform 0.22s ease, opacity 0.22s ease; }
+  .burger.open span:nth-child(1) { transform:translateY(5.5px) rotate(45deg); }
+  .burger.open span:nth-child(2) { opacity:0; }
+  .burger.open span:nth-child(3) { transform:translateY(-5.5px) rotate(-45deg); }
+  .burger:focus-visible, .topbar-cta:focus-visible, .topbar-brand:focus-visible, .nav-panel a:focus-visible {
+    outline:2px solid var(--lit); outline-offset:3px;
+  }
+
+  .nav-panel {
+    max-height:0; overflow:hidden; background:var(--ink);
+    border-bottom:1px solid transparent;
+    transition:max-height 0.36s cubic-bezier(0.22,1,0.36,1), border-color 0.36s ease;
+  }
+  .nav-panel.open { max-height:420px; border-bottom-color:rgba(255,255,255,0.07); }
+  .nav-panel-inner { max-width:1180px; margin:0 auto; padding:10px 26px 26px; display:flex; flex-direction:column; }
+  .nav-panel a {
+    display:flex; align-items:baseline; gap:16px;
+    color:rgba(255,255,255,0.88); font-family:var(--f-display); font-weight:400;
+    font-size:clamp(19px,3.4vw,27px); text-transform:uppercase; letter-spacing:-0.01em;
+    padding:15px 0; border-bottom:1px solid rgba(255,255,255,0.07);
+    transition:color 0.2s ease, padding-left 0.25s ease;
+  }
+  .nav-panel a:last-child { border-bottom:none; }
+  .nav-panel a i {
+    font-style:normal; font-family:var(--f-mono); font-size:11px;
+    color:var(--lit); letter-spacing:0.1em; flex-shrink:0; opacity:0.7;
+  }
+  .nav-panel a:hover { color:var(--lit); padding-left:10px; }
+
+  @media (max-width:900px) { .topbar-meta { display:none; } }
+  @media (max-width:640px) {
+    .topbar-inner { padding:10px 18px; }
+    .topbar-cta { display:none; }
+    .nav-panel-inner { padding:6px 18px 20px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .loader-facade i { animation:none; background:var(--lit); }
+    .nav-panel, .nav-panel a, .topbar, .topbar-cta, .burger span { transition:none; }
+  }
+</style> <div id="loader"> <div class="loader-facade"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div> <div class="loader-text">Свет включается…</div> </div> <div class="topbar" id="topbar"> <div class="topbar-inner"> <a class="topbar-brand" href="#top"> <img class="topbar-logo" src="https://www.donexpocentre.ru/media/filer_public/GG/kvc_logo.png" alt="ДонЭкспоцентр"> <span class="topbar-name">Форум продаж<b>недвижимости</b></span> </a> <div class="topbar-right"> <span class="topbar-meta" id="topbarMeta">13.11.26 · Ростов-на-Дону</span> <a href="#tickets" class="topbar-cta" onclick="if(window.ym){ym(111119624,'reachGoal','book_click_header')}">Забронировать место</a> <button class="burger" id="burgerBtn" aria-label="Меню" aria-expanded="false" aria-controls="navPanel"> <span></span><span></span><span></span> </button> </div> </div> <div class="nav-panel" id="navPanel"> <div class="nav-panel-inner"> <a href="#about"><i>01</i>О форуме</a> <a href="#schedule"><i>02</i>Программа форума</a> <a href="#pricing"><i>03</i>Стоимость участия</a> <a href="#tickets"><i>04</i>Забронировать место</a> <a href="#contacts"><i>05</i>Контакты</a> </div> </div> </div> <script>
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      var l = document.getElementById('loader');
+      if (l) l.classList.add('hide');
+      document.documentElement.classList.add('page-ready');
+    }, 400);
+  });
+  setTimeout(function() {
+    var l = document.getElementById('loader');
+    if (l) l.classList.add('hide');
+    document.documentElement.classList.add('page-ready');
+  }, 3500);
+
+  var burgerBtn = document.getElementById('burgerBtn');
+  var navPanel = document.getElementById('navPanel');
+  if (burgerBtn && navPanel) {
+    burgerBtn.addEventListener('click', function() {
+      var open = burgerBtn.classList.toggle('open');
+      navPanel.classList.toggle('open', open);
+      burgerBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    navPanel.querySelectorAll('a').forEach(function(a) {
+      a.addEventListener('click', function() {
+        burgerBtn.classList.remove('open');
+        navPanel.classList.remove('open');
+        burgerBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && navPanel.classList.contains('open')) {
+        burgerBtn.classList.remove('open');
+        navPanel.classList.remove('open');
+        burgerBtn.setAttribute('aria-expanded', 'false');
+        burgerBtn.focus();
+      }
+    });
+  }
+
+  var topbarEl = document.getElementById('topbar');
+  if (topbarEl) {
+    var onScrollTopbar = function() {
+      topbarEl.classList.toggle('scrolled', window.pageYOffset > 24);
+    };
+    onScrollTopbar();
+    window.addEventListener('scroll', onScrollTopbar, { passive:true });
+  }
+</script>
