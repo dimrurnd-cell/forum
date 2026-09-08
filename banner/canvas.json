@@ -1,0 +1,34 @@
+{
+  "artboards": [
+    {
+      "file": "Main.dc.html",
+      "x": 0,
+      "y": 0,
+      "w": 1200,
+      "h": 630,
+      "title": "1200×630 — соцсети и превью ссылки",
+      "print": "fixed"
+    },
+    {
+      "file": "Wide.dc.html",
+      "x": 0,
+      "y": 750,
+      "w": 1920,
+      "h": 480,
+      "title": "1920×480 — шапка сайта",
+      "print": "fixed"
+    },
+    {
+      "file": "Strip.dc.html",
+      "x": 0,
+      "y": 1350,
+      "w": 1200,
+      "h": 300,
+      "title": "1200×300 — узкая полоса и письмо",
+      "print": "fixed"
+    }
+  ],
+  "launch": {
+    "view": "canvas"
+  }
+}
