@@ -7,6 +7,7 @@
 | `Main.dc.html`  | 1200 × 630  | соцсети, превью ссылки в мессенджерах, шапка письма |
 | `Wide.dc.html`  | 1920 × 480  | шапка сайта, экран в холле |
 | `Strip.dc.html` | 1200 × 300  | узкая полоса, врезка в письмо или статью |
+| `Square.dc.html` | 330 × 330  | квадратная врезка в сайдбар |
 
 Канвас со всеми тремя: https://claude.ai/code/artifact/7a020096-6187-40de-ad82-bb12a8ded60e
 PNG выгружается из панели Export у каждого артборда.
@@ -32,6 +33,7 @@ node "<каталог скилла design>/seed-canvas.mjs" \
   --out banner-foruma-prodazh-nedvizhimosti.html \
   --title "Баннер форума продаж недвижимости" \
   --artboard Main.dc.html --artboard Wide.dc.html --artboard Strip.dc.html \
+  --artboard Square.dc.html \
   --image gelevey.jpg --image ulickaya.jpg --image arharova.jpg --image shabarov.jpg \
   --image klimenko.jpg --image delibaltidis.jpg --image guseva.jpg \
   --canvas canvas.json
