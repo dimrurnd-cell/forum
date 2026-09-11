@@ -283,6 +283,11 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
     gap:clamp(30px,4.5vw,64px); align-items:center;
   }
   .hero-copy { container-type:inline-size; will-change:transform; }
+  /* строка с площадкой в первом экране крупнее, чем подписи в остальных секциях */
+  .hero .eyebrow {
+    font-size:clamp(11px,1.1vw,15px); letter-spacing:0.13em; align-items:flex-start;
+  }
+  .hero .eyebrow::before { width:32px; margin-top:0.62em; flex-shrink:0; }
   .facade { will-change:transform; }
   .hero h1 {
     color:#fff; font-size:clamp(26px,9vw,72px); line-height:0.96;
@@ -684,6 +689,12 @@ document.addEventListener('DOMContentLoaded',t_setvisRecs);}})();</script></head
   }
   @media (max-width:900px) {
     .countdown-inner { align-items:flex-start; }
+  }
+  @media (max-width:480px) {
+    /* на узких экранах подпись перекрытия не влезала в строку и обрезалась */
+    .seam-inner { gap:10px; }
+    .seam-name, .seam-fact { font-size:10px; letter-spacing:0.1em; white-space:normal; }
+    .seam-rule { min-width:12px; }
   }
   @media (max-width:520px) {
     .hero-partner, .countdown-partner { flex-direction:column; gap:18px; }
