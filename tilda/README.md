@@ -19,7 +19,7 @@ FTP не нужен. Вся страница собрана из блоков **
 Ничего заменять перед вставкой не нужно.
 
 Используются семь имён, ровно как файлы в `images/` этого репозитория:
-`Arharova`, `Delibaltidis`, `Gelevey`, `Guseva`, `Klimenko`, `Shabarov`,
+`Arharova`, `Baltadzhiev`, `Gelevey`, `Guseva`, `Klimenko`, `Shabarov`,
 `Ulickaya`.
 
 Это пережатые JPEG 720×720 — 392 КБ на все семь. Одно и то же фото
